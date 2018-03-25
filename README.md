@@ -46,7 +46,7 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 1. `Node.js`
 1. Project: Skill-Sharing Website
 
-[cover]: cover.jpg
+[cover]: assets/cover.jpg
 [cc]: http://creativecommons.org/licenses/by-nc/3.0/
 [mit]: http://opensource.org/licenses/MIT
 [ejs]: http://eloquentjavascript.net/
