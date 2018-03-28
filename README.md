@@ -23,7 +23,7 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 
 ## Contents (内容/目录)
 
-0. 简介
+0. [简介][00_intro]
 1. 值，类型和操作符
 1. 程序结构
 1. 函数
@@ -51,3 +51,4 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 [mit]: http://opensource.org/licenses/MIT
 [ejs]: http://eloquentjavascript.net/
 [ejs2]: https://www.amazon.com/Eloquent-JavaScript-2nd-Ed-Introduction/dp/1593275846
+[00_intro]: Part_0_Introduction/00_intro.md
