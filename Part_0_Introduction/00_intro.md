@@ -53,3 +53,37 @@
 00010000 00000010 00000000
 01100010 00000000 00000000
 ```
+
+这个程序把从 1 到 10 的数字加起来，并打印出结果：`1 + 2 + ... + 10 = 55`。它可以运行在一台简单的虚拟机器上。为了在早期计算机上编程，你需要在合适的位置设置大批的开关，或者在纸板上打孔然后送入计算机。你可以大概想象一下这个过程多么的单调和易错。即使是写简单的程序，也需要极高的灵巧和自律。对于复杂的程序，更是不可想象。
+
+当然，手动输入这些神奇的比特(即：0 和 1)模式确实让程序员强烈感受到作为一位专家是多么地强大。这就跟职业满意度有关了。
+
+上述程序的每一行包含着一条指令。可以用英语写成这样：
+
+```
+1. Store the number 0 in memory location 0.
+2. Store the number 1 in memory location 1.
+3. Store the value of memory location 1 in memory location 2.
+4. Subtract the number 11 from the value in memory location 2.
+5. If the value in memory location 2 is the number 0, continue with instruction 9.
+6. Add the value of memory location 1 to memory location 0.
+7. Add the number 1 to the value of memory location 1.
+8. Continue with instruction 3.
+9. Output the value of memory location 0.
+```
+
+尽管这样已经比大量的比特串易读多了，但仍然比较费解。使用名称而不是数字来表示指令和内存地址，就好得多了：
+
+```
+ Set “total” to 0.
+ Set “count” to 1.
+[loop]
+ Set “compare” to “count”.
+ Subtract 11 from “compare”.
+ If “compare” is zero, continue at [end].
+ Add “count” to “total”.
+ Add 1 to “count”.
+ Continue at [loop].
+[end]
+ Output “total”.
+```
