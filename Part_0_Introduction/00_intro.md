@@ -135,6 +135,10 @@ console.log(sum(range(1, 10)));
 
 Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，比如`MongoDB`和`CouchDB`，使用`JavaScript`作为它们的脚本和查询语言。几个桌面端和服务器端编程平台，尤其是`Node.js`项目([第20章][link_chapter_20]的主题)，提供了在浏览器之外进行`JavaScript`编程的环境。
 
+## 代码，以及用它做什么
+
+*代码* 是组成程序的文字。本书大多数章节都包含大量的代码。我相信读、写代码是学习编程不可或缺的部分。不要只是随便看看例子，而要仔细阅读并理解。一开始这么做可能会比较慢，也比较困惑，但我保证你很快就能熟悉了。对于练习，也是一样的。不要假定你理解了它们，除非你真正写出了一个可用的解法。
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
 [link_chapter_20]: ../Part_3_Node/20_node.md
