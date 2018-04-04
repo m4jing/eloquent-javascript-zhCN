@@ -157,6 +157,10 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 在[第一个项目章节][link_chapter_7]之后，本书的语言部分分别介绍了[错误处理和Bug修复][link_chapter_8]，[正则表达式][link_chapter_9](处理文本的重要工具)，[模块化][link_chapter_10](另一个控制复杂度的技术)，以及[异步编程][link_chapter_11](处理耗时的事件)。[第二个项目章节][link_chapter_12]总结了本书第一部分。
 
+第二部分(从[第 13 章][link_chapter_13]到[第 19 章][link_chapter_19])描述了浏览器端`JavaScript`可以处理的内容。你将学会在屏幕上展示事物(第 14 章和第 17 章)，响应用户输入([第 15 章][link_chapter_15])，以及通过网络完成通信([第 18 章][link_chapter_18])。这一部分又有 2 个项目章节。
+
+最后，[第 20 章][link_chapter_20]讲述了`Node.js`，[第 21 章][link_chapter_21]则用它创建了一个小网站。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
@@ -168,7 +172,10 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 [link_chapter_10]: ../Part_1_Language/10_modules.md
 [link_chapter_11]: ../Part_1_Language/11_async.md
 [link_chapter_12]: ../Part_1_Language/12_language.md
+[link_chapter_13]: ../Part_2_Browser/13_browser.md
+[link_chapter_15]: ../Part_2_Browser/15_event.md
 [link_chapter_16]: ../Part_2_Browser/16_game.md
+[link_chapter_18]: ../Part_2_Browser/18_http.md
 [link_chapter_19]: ../Part_2_Browser/19_paint.md
 [link_chapter_20]: ../Part_3_Node/20_node.md
 [link_chapter_21]: ../Part_3_Node/21_skillsharing.md
