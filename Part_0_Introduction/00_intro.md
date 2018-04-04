@@ -153,7 +153,13 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 整本书中共有 5 个 *项目章节*，描述了更大的示例程序，以便让你感受真正的编程。按照出现的顺序，我们会创建一个[机器人][link_chapter_7]，一门[编程语言][link_chapter_12]，一个[平台游戏][link_chapter_16]，一个[绘图程序][link_chapter_19]和一个[动态网站][link_chapter_21]。
 
+本书的语言部分以介绍`JavaScript`语言基本结构的 4 个章节开头。它们介绍了[控制结构][link_chapter_2](比如在本章之前所看到的`while`关键字)，[函数][link_chapter_3](编写自己的组块)，以及[数据结构][link_chapter_4]。然后，你将能写基本的程序了。接着，[第五章][link_chapter_5]和[第六章][link_chapter_6]介绍了使用函数和对象来编写更加 *抽象* 的代码的技术，以控制复杂度。
+
+[link_chapter_2]: ../Part_1_Language/02_program_structure.md
+[link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
+[link_chapter_5]: ../Part_1_Language/05_higher_order.md
+[link_chapter_6]: ../Part_1_Language/06_object.md
 [link_chapter_7]: ../Part_1_Language/07_robot.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
 [link_chapter_12]: ../Part_1_Language/12_language.md
