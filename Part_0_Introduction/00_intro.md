@@ -2,7 +2,7 @@
 
 > 我们认为是在以自己的意愿来创建这个系统。但是计算机却不完全像我们，它只是我们自身很小一部分的映射：关于逻辑、次序、规则和明确性的那部分。
 >
-> -- Ellen Ullman, **Close to the Machine**: Technophilia and its Discontents
+> -- Ellen Ullman, *Close to the Machine: Technophilia and its Discontents*
 
 这是一本关于指挥计算机的书。现如今，计算机就像螺丝刀一样常见，但却复杂的多，使得指挥它们做你想让它们做的事情不那么容易。
 
