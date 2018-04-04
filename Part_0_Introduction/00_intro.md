@@ -139,6 +139,14 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 *代码* 是组成程序的文字。本书大多数章节都包含大量的代码。我相信读、写代码是学习编程不可或缺的部分。不要只是随便看看例子，而要仔细阅读并理解。一开始这么做可能会比较慢，也比较困惑，但我保证你很快就能熟悉了。对于练习，也是一样的。不要假定你理解了它们，除非你真正写出了一个可用的解法。
 
+我建议你在一个真实的`JavaScript`解析器中尝试解答这些练习。这样的话，你的答案是否正确会立即反馈出来，并且我希望能引导你超越练习去进一步实验。
+
+运行和试验本书中示例代码最简单的方式就是在本书的在线版本 [eloquentjavascript.net][link_official_site] 中查找。
+
+在那里，你可以点击任意代码示例来编辑、运行，查看所产生的输出。如果要做习题，可以访问 [eloquentjavascript.net/code][link_official_site_code]，这里提供了每个编程习题的初始代码，你也可以查看答案。
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
 [link_chapter_20]: ../Part_3_Node/20_node.md
+[link_official_site]: http://eloquentjavascript.net
+[link_official_site_code]: http://eloquentjavascript.net/code
