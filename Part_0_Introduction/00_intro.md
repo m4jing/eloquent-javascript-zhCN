@@ -161,6 +161,29 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 最后，[第 20 章][link_chapter_20]讲述了`Node.js`，[第 21 章][link_chapter_21]则用它创建了一个小网站。
 
+## 排版约定
+
+本书中，等宽字体的文字代表着程序的元素：有时候它们是独立的代码片段，有时候它们仅仅是临近程序的一部分。程序(你已经见过好几个了)被书写成这样：
+
+```js
+function factorial(n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return factorial(n - 1) * n;
+  }
+}
+```
+
+有时候，为了显示程序生成的结果，将在其下方打印出结果，并以双斜线和一个箭头开头。
+
+```js
+console.log(factorial(8));
+// → 40320
+```
+
+祝你好运！
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
