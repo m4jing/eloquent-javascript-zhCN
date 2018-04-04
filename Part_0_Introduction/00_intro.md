@@ -151,8 +151,15 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 本书大概包括三部分。前 12 章讨论`JavaScript`语言本身。接下来 7 章是关于 Web 浏览器以及用`JavaScript`进行编程的内容。最后 2 章讲述另一个`JavaScript`的编程环境：`Node.js`。
 
+整本书中共有 5 个 *项目章节*，描述了更大的示例程序，以便让你感受真正的编程。按照出现的顺序，我们会创建一个[机器人][link_chapter_7]，一门[编程语言][link_chapter_12]，一个[平台游戏][link_chapter_16]，一个[绘图程序][link_chapter_19]和一个[动态网站][link_chapter_21]。
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
+[link_chapter_7]: ../Part_1_Language/07_robot.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
+[link_chapter_12]: ../Part_1_Language/12_language.md
+[link_chapter_16]: ../Part_2_Browser/16_game.md
+[link_chapter_19]: ../Part_2_Browser/19_paint.md
 [link_chapter_20]: ../Part_3_Node/20_node.md
+[link_chapter_21]: ../Part_3_Node/21_skillsharing.md
 [link_official_site]: http://eloquentjavascript.net
 [link_official_site_code]: http://eloquentjavascript.net/code
