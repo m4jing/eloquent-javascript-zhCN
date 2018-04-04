@@ -24,7 +24,7 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 ## Contents (内容/目录)
 
 0. [简介][00_intro]
-1. 值，类型和操作符
+1. [值，类型和操作符][01_values]
 1. 程序结构
 1. 函数
 1. 数据结构：对象和数组
@@ -52,3 +52,4 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 [ejs]: http://eloquentjavascript.net/
 [ejs2]: https://www.amazon.com/Eloquent-JavaScript-2nd-Ed-Introduction/dp/1593275846
 [00_intro]: Part_0_Introduction/00_intro.md
+[01_values]: Part_1_Language/01_values.md
