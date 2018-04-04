@@ -155,13 +155,18 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 本书的语言部分以介绍`JavaScript`语言基本结构的 4 个章节开头。它们介绍了[控制结构][link_chapter_2](比如在本章之前所看到的`while`关键字)，[函数][link_chapter_3](编写自己的组块)，以及[数据结构][link_chapter_4]。然后，你将能写基本的程序了。接着，[第五章][link_chapter_5]和[第六章][link_chapter_6]介绍了使用函数和对象来编写更加 *抽象* 的代码的技术，以控制复杂度。
 
+在[第一个项目章节][link_chapter_7]之后，本书的语言部分分别介绍了[错误处理和Bug修复][link_chapter_8]，[正则表达式][link_chapter_9](处理文本的重要工具)，[模块化][link_chapter_10](另一个控制复杂度的技术)，以及[异步编程][link_chapter_11](处理耗时的事件)。[第二个项目章节][link_chapter_12]总结了本书第一部分。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
 [link_chapter_7]: ../Part_1_Language/07_robot.md
+[link_chapter_8]: ../Part_1_Language/08_error.md
+[link_chapter_9]: ../Part_1_Language/09_regexp.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
+[link_chapter_11]: ../Part_1_Language/11_async.md
 [link_chapter_12]: ../Part_1_Language/12_language.md
 [link_chapter_16]: ../Part_2_Browser/16_game.md
 [link_chapter_19]: ../Part_2_Browser/19_paint.md
