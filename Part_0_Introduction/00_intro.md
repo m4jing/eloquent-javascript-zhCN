@@ -145,6 +145,8 @@ Web 浏览器并不是`JavaScript`可运行的唯一平台。一些数据库，
 
 在那里，你可以点击任意代码示例来编辑、运行，查看所产生的输出。如果要做习题，可以访问 [eloquentjavascript.net/code][link_official_site_code]，这里提供了每个编程习题的初始代码，你也可以查看答案。
 
+如果你想在本书网站之外的环境中运行书中的程序，需要特别注意。一些例子是独立的，可以在任何`JavaScript`环境中运行。但是后续一些章节的代码往往针对特定环境(浏览器或`Node.js`)而写，这些代码就只能在相应环境中才能运行。另外，很多章节定义了更大的程序，其中的代码需要依赖彼此或外部文件。网站上的[沙盒][link_official_site_code]提供了`Zip`包的链接，其中含有运行指定章节代码所需的所有脚本和数据文件。
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_10]: ../Part_1_Language/10_modules.md
 [link_chapter_20]: ../Part_3_Node/20_node.md
