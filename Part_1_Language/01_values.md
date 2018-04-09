@@ -117,3 +117,9 @@
 This is the first line
 And this is the second
 ```
+
+当然，也有很多情况：你不想让反斜杠成为特殊字符，就当作一个反斜杠。如果 2 个反斜杠紧挨着，它们会“折叠”在一起：只有一个会留下来出现在最终的字符串值中。比如，字符串 “A newline character is written like "\n".” 可以如下表示：
+
+```js
+"A newline character is written like \"\\n\"."
+```
