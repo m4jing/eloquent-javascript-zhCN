@@ -123,3 +123,9 @@ And this is the second
 ```js
 "A newline character is written like \"\\n\"."
 ```
+
+字符串也必须建模成比特串，以供计算机使用。`JavaScript`基于 *Unicode* 标准来做这件事。这个标准会指定一个数字给几乎每一个你需要的字符，包括希腊语、阿拉伯语、日语、亚美尼亚语等等的字符。如果对于每一个字符都有一个数字来对应，那么字符串就可以通过一系列的数字来描述了。
+
+`JavaScript`就是这么干的。但是有一个难点：`JavaScript`使用共可表示 2<sup>16</sup> 个不同的数字的 16 位比特来表示一个字符串元素。而Unicode定义了更多的字符，差不多 2 倍。因此，有些字符，比如 *emoji*，在`JavaScript`字符串中占 2 个“字符位置”。我们将在[第五章][link_chapter_5]重新回到这个话题。
+
+[link_chapter_5]: ../Part_1_Language/05_higher_order.md
