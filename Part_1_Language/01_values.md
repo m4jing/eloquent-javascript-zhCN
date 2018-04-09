@@ -134,4 +134,7 @@ And this is the second
 "con" + "cat" + "e" + "nate"
 ```
 
+字符串有很多相关的函数(*方法*)用来对其进行其他操作。我们将在[第四章][link_chapter_4]继续讨论。
+
+[link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
