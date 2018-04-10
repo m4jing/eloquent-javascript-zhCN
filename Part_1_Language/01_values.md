@@ -188,6 +188,17 @@ console.log("Aardvark" < "Zoroaster")
 // → true
 ```
 
+字符串的排序基本上是按照字母表顺序的，但又不完全是你期望的在字典里看到的那样：大写字母总是“小于”小写字母，因此 `"Z" < "a"`，并且非字母表字符(`!`，`-`等等)也以此方式排序。当比较字符串时，`JavaScript`从左至右查看字符，一个一个地比较对应的 Unicode 编码。
+
+其他类似的操作符还有 `>=` (大于或等于)，`<=` (小于或等于)，`==` (等于) 和 `!=` (不等于)。
+
+```js
+console.log("Itchy" != "Scratchy")
+// → true
+console.log("Apple" == "Orange")
+// → false
+```
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
