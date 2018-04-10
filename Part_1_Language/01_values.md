@@ -179,6 +179,15 @@ console.log(3 < 2)
 // → false
 ```
 
+`>` 和 `<` 就是传统的符号，分别表示“大于”和“小于”。它们是二元操作符。使用它们时，会生成一个布尔值，表明了在当前情况下是否为真。
+
+字符串也可以同样的方式进行比较。
+
+```js
+console.log("Aardvark" < "Zoroaster")
+// → true
+```
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
