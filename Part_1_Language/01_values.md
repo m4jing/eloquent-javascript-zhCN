@@ -199,6 +199,15 @@ console.log("Apple" == "Orange")
 // → false
 ```
 
+`JavaScript`中只有一个值不等于它本身，这就是 `NaN`(“不是数字”)。
+
+```js
+console.log(NaN == NaN)
+// → false
+```
+
+`NaN` 被设计用来表示无意义计算的结果，因此，它不等于任何 *其他* 无意义计算的结果。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
