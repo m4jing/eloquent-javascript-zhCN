@@ -168,6 +168,17 @@ console.log(- (10 - 2))
 
 很多时候，有一个能区分仅有的两种可能性(比如“yes”和“no”，或“on”和“off”)的值，会非常有用。为此，`JavaScript`中有一个 *布尔* 类型，它只有 2 个值：`true` 和 `false`。
 
+## 比较
+
+这里是生成布尔值的一种方式：
+
+```js
+console.log(3 > 2)
+// → true
+console.log(3 < 2)
+// → false
+```
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
