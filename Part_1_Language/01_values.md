@@ -144,5 +144,16 @@ And this is the second
 
 当在模板字符串中，当你在 `${}` 内写入了一些内容时，那么它的结果会被计算并转为字符串，然后插入到相应位置上。上述例子结果为 “*half of 100 is 50*”。
 
+## 一元操作符
+
+并非所有操作符都是符号，有一些被写成关键字的形式。一个例子就是 `typeof` 操作符，它会生成一个字符串值，表明你所传给它的值的类型。
+
+```js
+console.log(typeof 4.5)
+// → number
+console.log(typeof "x")
+// → string
+```
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
