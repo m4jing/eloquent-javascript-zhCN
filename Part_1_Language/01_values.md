@@ -155,5 +155,15 @@ console.log(typeof "x")
 // → string
 ```
 
+我们在例子中用了 `console.log` ，表明我们想查看对某些内容求值之后的结果。更多内容，请查看[下一章][link_chapter_2]。
+
+我们所看到的其他操作符，都是作用在两个值的，而 `typeof` 只需要一个。需要用到两个值的操作符叫做 *二元* 操作符，而那些只需要一个的则叫做 *一元* 操作符。`-`(减号)操作符既可以用作二元操作符，也可以用作一元操作符。
+
+```js
+console.log(- (10 - 2))
+// → -8
+```
+
+[link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
