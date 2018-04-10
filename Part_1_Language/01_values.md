@@ -136,5 +136,7 @@ And this is the second
 
 字符串有很多相关的函数(*方法*)用来对其进行其他操作。我们将在[第四章][link_chapter_4]继续讨论。
 
+字符串使用单引号或双引号，效果基本一样，唯一的不同在于：在哪一种引号中需要转义。
+
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
