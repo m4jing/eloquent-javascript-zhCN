@@ -208,6 +208,19 @@ console.log(NaN == NaN)
 
 `NaN` 被设计用来表示无意义计算的结果，因此，它不等于任何 *其他* 无意义计算的结果。
 
+## 逻辑操作符
+
+也有一些操作可以用于布尔值本身。`JavaScript`支持 3 种逻辑操作符：*与*，*或* 和 *非*。它们可以被用来对布尔值进行“推理”。
+
+`&&` 操作符代表逻辑 *与*。它是一个二元操作符，当且仅当传给它的值都为真时，它的结果才为真。
+
+```js
+console.log(true && false)
+// → false
+console.log(true && true)
+// → true
+```
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
