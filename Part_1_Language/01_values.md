@@ -221,6 +221,17 @@ console.log(true && true)
 // → true
 ```
 
+`||` 操作符表示逻辑 *或*。传给它的任一个值为真，它就会返回真。
+
+```js
+console.log(false || true)
+// → true
+console.log(false || false)
+// → false
+```
+
+*非* 被写成一个叹号(`!`)。它是一元操作符，会将传给它的值翻转：`!true` 生成 `false`，而 `!false` 则生成 `true`。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
