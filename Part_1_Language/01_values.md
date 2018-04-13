@@ -249,6 +249,12 @@ console.log(false ? 1 : 2);
 
 这个操作符叫作 *条件操作符*(有时候也叫作 *三元操作符*，因为这是该语言中唯一的此类操作符)。问号左侧的值将“挑选”最终结果是来自于另外两个值中的哪一个。当它为真时，则选中间那个值；为假时，则选右边那个值。
 
+## 空值
+
+有 2 个特殊值，`null` 和 `undefined`，用来表示“没有意义的值”。它们是值，但却不携带信息。
+
+语言中很多不能生成一个有意义的值的操作(一会儿会看到例子)就会生成 `undefined`，因为它们必须生成 *某些* 值。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
