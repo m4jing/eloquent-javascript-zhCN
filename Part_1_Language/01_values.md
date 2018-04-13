@@ -255,6 +255,8 @@ console.log(false ? 1 : 2);
 
 语言中很多不能生成一个有意义的值的操作(一会儿会看到例子)就会生成 `undefined`，因为它们必须生成 *某些* 值。
 
+`null` 和 `undefined` 意义上的不同，是`JavaScript`设计的一个意外，大多数时候不太重要。在真正必须考虑这些值的情况中，我建议把它们基本上当作可互相替换的值。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
