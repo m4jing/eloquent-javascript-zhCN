@@ -257,6 +257,23 @@ console.log(false ? 1 : 2);
 
 `null` 和 `undefined` 意义上的不同，是`JavaScript`设计的一个意外，大多数时候不太重要。在真正必须考虑这些值的情况中，我建议把它们基本上当作可互相替换的值。
 
+## 自动类型转换
+
+我曾经在简介中提到，`JavaScript`可以接受你给它的几乎任何程序，甚至是做奇怪事情的程序。下面的表达式可以充分说明这一点：
+
+```js
+console.log(8 * null)
+// → 0
+console.log("5" - 1)
+// → 4
+console.log("5" + 1)
+// → 51
+console.log("five" * 2)
+// → NaN
+console.log(false == 0)
+// → true
+```
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
