@@ -274,6 +274,8 @@ console.log(false == 0)
 // → true
 ```
 
+当一个操作符被用于“错误”类型的值时，`JavaScript`会使用不像你想象中那样的规则静默地把那个值转换成它需要的类型。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
