@@ -278,6 +278,17 @@ console.log(false == 0)
 
 当某些不能以明确的方式映射成数字的值(比如：`"five"` 或 `undefined`)被转换成数字时，将会得到 `NaN` 值。对 `NaN` 的后续算术运算将一直生成 `NaN`，所以，如果你发现在一个意外的地方得到了这样的值，就需要查找意外的类型转换。
 
+当用 `==` 来比较同类型的值时，结果很容易预测：当两个值相同时为真，有 `NaN` 的情况除外。当类型不同时，`JavaScript`有一套复杂难懂的规则来确定要做什么。大多数情况下，它会尝试把其中一个值转换为另一个值的类型。然而，当 `null` 或 `undefined` 出现在操作符的任一边时，当且仅当两边的值同为 `null` 和 `undefined` 其中之一时，结果为真。
+
+```js
+console.log(null == undefined);
+// → true
+console.log(null == 0);
+// → false
+```
+
+这个行为通常很有用。当你想测试一个值是否真实有值而不是 `null` 或 `undefined` 时，就可以把它与 `null` 用 `==`(或 `!=`)操作符来比较。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
