@@ -293,6 +293,10 @@ console.log(null == 0);
 
 我建议使用三字符的比较操作符来避免意外的类型转换而导致错误。不过，如果你能确定两边的类型相同，使用短操作符就完全没有问题。
 
+## 逻辑操作符的“短路”
+
+逻辑操作符 `&&` 和 `||` 用特有的方式来处理不同类型的值。
+
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
