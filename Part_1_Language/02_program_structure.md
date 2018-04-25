@@ -43,4 +43,15 @@ console.log(ten * ten);
 // → 100
 ```
 
+当一个绑定指向一个值时，并不意味着它和那个值永远捆绑在一起了。可以在任何时候用 `=` 操作符把它们与当前值解绑并使其指向一个新值。
+
+```js
+let mood = "light";
+console.log(mood);
+// → light
+mood = "dark";
+console.log(mood);
+// → dark
+```
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
