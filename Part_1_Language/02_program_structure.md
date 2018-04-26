@@ -84,6 +84,9 @@ console.log(greeting + name);
 // → Hello Ayda
 ```
 
-第一个，`var` (“variable”，变量的缩写)，是 2015 年之前的`JavaScript`定义绑定的方式。
+第一个，`var` (“variable”，变量的缩写)，是 2015 年之前的`JavaScript`定义绑定的方式。在[下一章][link_chapter_3]我们会继续介绍它与 `let` 的不同。目前来说，记住它几乎是在做同样的事情，不过本书中我们很少用它，因为它有一些令人困惑的特性。
+
+关键字 `const` 代表 *constant* (常量)。它定义了一个常量绑定，不能再指向一个新值。这对于如下情况的绑定很有用：把值赋予名称，以方便后续引用它们，但这些值永远不会改变。
 
 [link_chapter_1]: ../Part_1_Language/01_values.md
+[link_chapter_3]: ../Part_1_Language/03_functions.md
