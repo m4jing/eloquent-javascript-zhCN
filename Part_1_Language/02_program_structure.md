@@ -54,4 +54,15 @@ console.log(mood);
 // → dark
 ```
 
+你应该把绑定想象成触须，而不是盒子。它们不 *包含* 值，它们只是 *抓取* 值 —— 两个绑定可以指向相同的值。程序只能读取它仍然持有的值。当你需要记住某个事物，你可以生长一条触须来抓住它，或者让现存的一条触须重新附着给它。
+
+我们来看另一个例子。为了记住 Luigi 欠你的美元数，你创建了一个绑定。当他还了 35$ 时，你就赋予这个绑定一个新值。
+
+```js
+let luigisDebt = 140;
+luigisDebt = luigisDebt - 35;
+console.log(luigisDebt);
+// → 105
+```
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
