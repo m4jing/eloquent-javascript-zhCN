@@ -65,4 +65,25 @@ console.log(luigisDebt);
 // → 105
 ```
 
+当定义了一个绑定而又不给它值时，触须没什么可抓，就会飘荡在空中。如果你请求一个空绑定的值，将会得到 `undefined`。
+
+一个 `let` 可以定义多个绑定，多个定义必须以逗号隔开。
+
+```js
+let one = 1, two = 2;
+console.log(one + two);
+// → 3
+```
+
+`var` 和 `const` 也可以用来创建绑定，方式与 `let` 相同。
+
+```js
+var name = "Ayda";
+const greeting = "Hello ";
+console.log(greeting + name);
+// → Hello Ayda
+```
+
+第一个，`var` (“variable”，变量的缩写)，是 2015 年之前的`JavaScript`定义绑定的方式。
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
