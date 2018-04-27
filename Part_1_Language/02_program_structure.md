@@ -122,6 +122,13 @@ prompt("Enter passcode");
 
 在现代 Web 编程中不太会用到 `prompt` 函数，主要是无法控制对话框的显示样式，不过对于玩具程序和实验很有帮助。
 
+## `console.log` 函数
+
+在例子中，我用了 `console.log` 来输出值。大多数`JavaScript`系统(包括所有现代 Web 浏览器和 `Node.js`)都提供一个 `console.log` 函数来把它的参数写到某一文字输出设备。在浏览器中，这个输出是在`JavaScript` 控制台中。这部分浏览器界面默认是隐藏的，不过大部分浏览器可以通过按 **F12**，或者 Mac 中按下 **Command-Option-I** 来打开它。如果还不行，就在菜单中找 “开发者工具” 或者类似的一项。
+
+尽管绑定名称不能包含句号 (`.`)，可`console.log` 中确实有一个。这是因为 `console.log` 不是一个简单的绑定。它实际上是一个表达式：从 `console` 绑定所持有的值中获取 `log` 属性。我们将在[第四章][link_chapter_4]中弄清楚这是什么意思。
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
+[link_chapter_4]: ../Part_1_Language/04_data.md
 [prompt_img]: ../assets/cover.jpg
