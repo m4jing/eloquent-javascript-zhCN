@@ -88,5 +88,21 @@ console.log(greeting + name);
 
 关键字 `const` 代表 *constant* (常量)。它定义了一个常量绑定，不能再指向一个新值。这对于如下情况的绑定很有用：把值赋予名称，以方便后续引用它们，但这些值永远不会改变。
 
+## 绑定名称
+
+绑定名称可以是任意字词，保留为其他用途的(比如：`let`)除外。数字可以作为绑定名称的一部分。比如，`catch22` 是一个合法的名称，但是名称不能以数字开头。绑定名称可以包含美元符号(`$`)或下划线(`_`)，但不能是其他标点或特殊字符。
+
+具有特殊意义的字词，比如 `const`，叫作 *关键字*，它们不能被用作绑定名称。也有非常多的字词被“保留”，以在`JavaScript`的未来版本中使用，这些字词也不能被用作绑定名称。关键字和保留字的完整列表相当长。
+
+```js
+break case catch class const continue debugger default
+delete do else enum export extends false finally for
+function if implements import interface in instanceof let
+new package private protected public return static super
+switch this throw true try typeof var void while with yield
+```
+
+别担心记不住这些。当创建绑定出现意外的语法错误时，看看你是否在尝试定义一个保留字。
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
