@@ -149,4 +149,4 @@ console.log(Math.min(2, 4) + 100);
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
-[prompt_img]: ../assets/cover.jpg
+[prompt_img]: ../assets/prompt.png
