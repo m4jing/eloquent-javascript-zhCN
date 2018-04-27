@@ -128,6 +128,24 @@ prompt("Enter passcode");
 
 尽管绑定名称不能包含句号 (`.`)，可`console.log` 中确实有一个。这是因为 `console.log` 不是一个简单的绑定。它实际上是一个表达式：从 `console` 绑定所持有的值中获取 `log` 属性。我们将在[第四章][link_chapter_4]中弄清楚这是什么意思。
 
+## 返回值
+
+显示一个对话框或把文字写到屏幕上，都是 *副作用*。很多函数因其产生的副作用而非常有用。函数也可以生成值，这种情况下不需要产生副作用也很有用。例如，`Math.max` 函数以任意数目的数字为参数并给出其中的最大值。
+
+```js
+console.log(Math.max(2, 4));
+// → 4
+```
+
+当一个函数生成一个值，我们称之为 *返回* 了那个值。`JavaScript`中任何生成一个值的内容都是一个表达式，这意味着函数调用可以用于更大的表达式中。这里是 `Math.min` (与 `Math.max` 作用相反) 作为加法表达式一部分的一个调用：
+
+```js
+console.log(Math.min(2, 4) + 100);
+// → 102
+```
+
+[下一章][link_chapter_3]解释如何编写自己的函数。
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
