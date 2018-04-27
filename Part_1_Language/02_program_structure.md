@@ -104,5 +104,9 @@ switch this throw true try typeof var void while with yield
 
 别担心记不住这些。当创建绑定出现意外的语法错误时，看看你是否在尝试定义一个保留字。
 
+## 环境
+
+特定时刻，绑定及其值的集合，叫作 *环境*。当程序启动时，这个环境不为空。它总是包含语言标准的部分绑定，大多数时候，它还有一些绑定来提供与外界系统的交互。比如，在浏览器中，有函数可以与当前加载的网站进行交互，并获取鼠标和键盘的事件。
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
