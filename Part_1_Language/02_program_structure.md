@@ -155,7 +155,14 @@ let theNumber = Number(prompt("Pick a number"));
 console.log("Your number is the square root of " + theNumber * theNumber);
 ```
 
+`Number` 函数会把一个值转换为数字。我们需要这个转换，是因为 `prompt` 的结果是字符串，而我们需要一个数字。类似的函数还有 `String` 和 `Boolean`，会分别把值转换成相应的类型。
+
+直线型控制流的大致示意图如下：
+
+![straight-line control flow][controlflow_straight]
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [prompt_img]: ../assets/prompt.png
+[controlflow_straight]: ../assets/controlflow_straight.png
