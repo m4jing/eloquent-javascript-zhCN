@@ -146,6 +146,15 @@ console.log(Math.min(2, 4) + 100);
 
 [下一章][link_chapter_3]解释如何编写自己的函数。
 
+## 控制流
+
+当你的程序不止一条语句时，语句会像故事一样从上到下执行。下面这个示例程序有 2 条语句。第一条让用户输入一个数字，第二条随后执行，会显示那个数字的平方。
+
+```js
+let theNumber = Number(prompt("Pick a number"));
+console.log("Your number is the square root of " + theNumber * theNumber);
+```
+
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
