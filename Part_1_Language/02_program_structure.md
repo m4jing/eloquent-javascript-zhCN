@@ -1,5 +1,7 @@
 # 第二章、程序结构
 
+![chapter_picture_2][chapter_picture_2]
+
 本章开始，我们会进行真正的 *编程*。我们将加强对`JavaScript`语言的掌握，从目前我们所看到的词句碎片，直到我们可以写出有意义的散文。
 
 ## 表达式和语句
@@ -152,17 +154,19 @@ console.log(Math.min(2, 4) + 100);
 
 ```js
 let theNumber = Number(prompt("Pick a number"));
-console.log("Your number is the square root of " + theNumber * theNumber);
+console.log("Your number is the square root of " +
+            theNumber * theNumber);
 ```
 
 `Number` 函数会把一个值转换为数字。我们需要这个转换，是因为 `prompt` 的结果是字符串，而我们需要一个数字。类似的函数还有 `String` 和 `Boolean`，会分别把值转换成相应的类型。
 
 直线型控制流的大致示意图如下：
 
-![straight-line control flow][controlflow_straight]
+![straight-line control flow][controlflow-straight]
 
+[chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [prompt_img]: ../assets/prompt.png
-[controlflow_straight]: ../assets/controlflow_straight.png
+[controlflow-straight]: ../assets/controlflow-straight.svg
