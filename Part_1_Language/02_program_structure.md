@@ -170,6 +170,24 @@ console.log("Your number is the square root of " +
 
 ![if control flow][controlflow-if]
 
+`JavaScript`中使用 `if` 关键字来创建条件执行。简单情况下，我们希望一些代码当且仅当一个特定条件成立时执行。比如，我们希望仅在输入确实是一个数字时再显示它的平方。
+
+```js
+let theNumber = Number(prompt("Pick a number"));
+if (!isNaN(theNumber)) {
+  console.log("Your number is the square root of " +
+              theNumber * theNumber);
+}
+```
+
+做了这个修改之后，如果你输入 “parrat”，就不会显示任何内容。
+
+`if` 关键字根据布尔表达式的值来执行或略过一条语句。这个判断表达式写在关键字后面的括号中，随后是要执行的语句。
+
+`isNaN` 是`JavaScript`的一个标准函数，仅当传给它的参数是 `NaN` 时返回 `true`。`Number` 函数刚好在传入一个不能代表合法数字的字符串时返回 `NaN`。如此一来，那个条件的含义是：除非 `theNumber` 不是数字，否则就执行如下语句。
+
+本例中，`if` 下面的语句被封装进大括号(`{`和`}`)中。它们可以把任意数量的语句组合成一条单一的语句，称为 *块*。这个情况下可以省略掉大括号，因为其中只包含一条语句。为了避免思考是否需要它们，大多数`JavaScript`程序员在每一个封装语句中都会用到它们。本书中我们也主要遵循这个惯例，偶尔单行的情况除外。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
