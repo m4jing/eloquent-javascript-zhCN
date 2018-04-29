@@ -188,6 +188,43 @@ if (!isNaN(theNumber)) {
 
 本例中，`if` 下面的语句被封装进大括号(`{`和`}`)中。它们可以把任意数量的语句组合成一条单一的语句，称为 *块*。这个情况下可以省略掉大括号，因为其中只包含一条语句。为了避免思考是否需要它们，大多数`JavaScript`程序员在每一个封装语句中都会用到它们。本书中我们也主要遵循这个惯例，偶尔单行的情况除外。
 
+```js
+if (1 + 1 == 2) console.log("It's true");
+// → It's true
+```
+
+通常，你不仅有当条件为真时执行的代码，还有处理其他情况的代码。这条可选的路径由图中第二个箭头表示。`else` 关键字可以和 `if` 一起来创建两条独立、可选的执行路径。
+
+```js
+let theNumber = Number(prompt("Pick a number"));
+if (!isNaN(theNumber)) {
+  console.log("Your number is the square root of " +
+              theNumber * theNumber);
+} else {
+  console.log("Hey. Why didn't you give me a number?");
+}
+```
+
+如果有超过 2 条路径可选，可以把多个 `if`/`else` 对“串”在一起。比如：
+
+```js
+let num = Number(prompt("Pick a number"));
+
+if (num < 10) {
+  console.log("Small");
+} else if (num < 100) {
+  console.log("Medium");
+} else {
+  console.log("Large");
+}
+```
+
+这个程序首先检查 `num` 是否小于 10。如果是，则选择那条路径，显示 `"Small"` 并完成。如果不是，则选择 `else` 分支，这个分支又包含了第二个 `if`。如果第二个条件(`<` 100)成立，就说明那个数字介于 10 和 100 之间，则会显示 `"Medium"`。如果不成立，那么选择第二个也即最后一个 `else` 分支。
+
+这个程序的模式大致如下：
+
+![nested-if control flow][controlflow-nested-if]
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
@@ -195,3 +232,4 @@ if (!isNaN(theNumber)) {
 [prompt_img]: ../assets/prompt.png
 [controlflow-straight]: ../assets/controlflow-straight.svg
 [controlflow-if]: ../assets/controlflow-if.svg
+[controlflow-nested-if]: ../assets/controlflow-nested-if.svg
