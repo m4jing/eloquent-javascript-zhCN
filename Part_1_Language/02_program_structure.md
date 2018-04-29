@@ -164,9 +164,16 @@ console.log("Your number is the square root of " +
 
 ![straight-line control flow][controlflow-straight]
 
+## 条件执行
+
+不是所有程序都是“大直道”。举例来说，我们也许想要创建一条岔路：程序根据条件来选择合适的分支。这叫作 *条件执行*。
+
+![if control flow][controlflow-if]
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [prompt_img]: ../assets/prompt.png
 [controlflow-straight]: ../assets/controlflow-straight.svg
+[controlflow-if]: ../assets/controlflow-if.svg
