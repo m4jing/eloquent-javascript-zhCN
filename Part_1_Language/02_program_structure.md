@@ -225,6 +225,20 @@ if (num < 10) {
 
 ![nested-if control flow][controlflow-nested-if]
 
+## `while` 和 `do` 循环
+
+考虑一个输入从 0 到 12 之间所有偶数的程序。一种方式可以如下书写：
+
+```js
+console.log(0);
+console.log(2);
+console.log(4);
+console.log(6);
+console.log(8);
+console.log(10);
+console.log(12);
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
