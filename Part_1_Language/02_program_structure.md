@@ -239,6 +239,10 @@ console.log(10);
 console.log(12);
 ```
 
+这可以达到目的，但写程序是为了用 *更少* 的内容来搞定，而不是更多。假如我们需要 1000 以内的所有偶数，这种方法是不切实际的。我们需要的是一种能重复某些代码的方法。这种控制流叫作 *循环*。
+
+![loop control flow][controlflow-loop]
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
@@ -247,3 +251,4 @@ console.log(12);
 [controlflow-straight]: ../assets/controlflow-straight.svg
 [controlflow-if]: ../assets/controlflow-if.svg
 [controlflow-nested-if]: ../assets/controlflow-nested-if.svg
+[controlflow-loop]: ../assets/controlflow-loop.svg
