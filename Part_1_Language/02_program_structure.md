@@ -285,6 +285,8 @@ do {
 console.log(yourName);
 ```
 
+这个程序会让你输入一个名字。它会一遍又一遍地询问，直到获取的值不为空字符串。使用 `!` 操作符，会在对值取反之前将其转换为布尔值，除 `""`之外的所有字符串都转换为 `true`。这意味着该循环会一直运行，直到你提供了一个非空的名称。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
