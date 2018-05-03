@@ -260,10 +260,26 @@ while (number <= 12) {
 
 `number` 绑定展示了一个绑定用来追踪程序进程的方式。每一次循环重复时，`number` 的值就会在之前值的基础上加 2。每一次重复开始，都会将其与数字 12 相比，以判断程序的工作是否已完成。
 
+作为真实有用的一个例子，现在我们写一个程序来计算并显示 2<sup>10</sup> (2 的 10 次方)。我们用了 2 个绑定：一个追踪结果，一个记录对结果乘以 2 的次数。这个循环会检测第二个绑定是否已达到 10，如果没有，就相应更新两个绑定。
+
+```js
+let result = 1;
+let counter = 0;
+while (counter < 10) {
+  result = result * 2;
+  counter = counter + 1;
+}
+console.log(result);
+// → 1024
+```
+
+计数器也可以从 `1` 开始然后检查 `<= 10`，但是，由于一些原因([第四章][link_chapter_4#array_indexing]会解释)，最好是习惯于从 0 开始计数。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
+[link_chapter_4#array_indexing]: ../Part_1_Language/04_data.md#array_indexing
 [prompt_img]: ../assets/prompt.png
 [controlflow-straight]: ../assets/controlflow-straight.svg
 [controlflow-if]: ../assets/controlflow-if.svg
