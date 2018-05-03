@@ -243,6 +243,23 @@ console.log(12);
 
 ![loop control flow][controlflow-loop]
 
+循环控制流使得我们可以回到程序中曾经到达的某一点，并以当前程序状态再进行重复。如果我们把这个机制与一个计数的绑定相结合，可以这样写：
+
+```js
+let number = 0;
+while (number <= 12) {
+  console.log(number);
+  number = number + 2;
+}
+// → 0
+// → 2
+//   … etcetera
+```
+
+以关键字 `while` 开头的语句会创建一个循环。关键字 `while` 之后是包在括号中的表达式，随后是一条语句，跟 `if` 很像。只要表达式的值在转换成布尔值时为 `true`，这个循环就会一直进入那条语句。
+
+`number` 绑定展示了一个绑定用来追踪程序进程的方式。每一次循环重复时，`number` 的值就会在之前值的基础上加 2。每一次重复开始，都会将其与数字 12 相比，以判断程序的工作是否已完成。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
