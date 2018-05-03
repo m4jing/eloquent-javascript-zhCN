@@ -275,6 +275,16 @@ console.log(result);
 
 计数器也可以从 `1` 开始然后检查 `<= 10`，但是，由于一些原因([第四章][link_chapter_4#array_indexing]会解释)，最好是习惯于从 0 开始计数。
 
+`do` 循环是一个与 `while` 循环相似的控制结构。它们只有一点不同：`do` 循环总会执行循环体至少一次，并且在第一次执行之后检测是否应该停止。为了反映这一点，检测出现在循环体之后：
+
+```js
+let yourName;
+do {
+  yourName = prompt("Who are you?");
+} while (!yourName);
+console.log(yourName);
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
