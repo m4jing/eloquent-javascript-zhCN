@@ -304,6 +304,21 @@ if (false != true) {
 
 大多数代码编辑器会自动对新行进行适当的缩进。
 
+## `for` 循环
+
+很多循环都遵循上面 `while` 例子中的模式。首先，创建一个“计数器”绑定来追踪循环的进程。然后是一个 `while` 循环，其测试表达式通常会检测计数器是否已经到达它最终的值。在循环体最后，更新计数器。
+
+因为这个模式太常见了，`JavaScript`和类似的语言提供了一个略微简短而更全面的形式：`for` 循环。
+
+```js
+for (let number = 0; number <= 12; number = number + 2) {
+  console.log(number);
+}
+// → 0
+// → 2
+// … etcetera
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
