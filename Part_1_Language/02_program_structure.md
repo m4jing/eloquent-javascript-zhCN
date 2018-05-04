@@ -319,6 +319,21 @@ for (let number = 0; number <= 12; number = number + 2) {
 // … etcetera
 ```
 
+这个程序完全等价于之前的打印偶数的例子。唯一的改变在于：所有与循环“状态”相关的语句都被组合在一起，放于 `for` 之后。
+
+`for` 关键字后面的括号必须包含 2 个分号。第一个分号之前的部分 *初始化* 循环，通常会定义一个绑定。第二个部分是 *检测* 循环是否要继续的表达式。最后一部分在每一次迭代之后 *更新* 循环的状态。大多数情况下，这要比 `while` 结构更短更清晰。
+
+这里是计算 2<sup>10</sup> 的代码，使用 `for` 而不是 `while`：
+
+```js
+let result = 1;
+for (let counter = 0; counter < 10; counter = counter + 1) {
+  result = result * 2;
+}
+console.log(result);
+// → 1024
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
