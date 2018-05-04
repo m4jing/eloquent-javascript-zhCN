@@ -415,11 +415,27 @@ switch (prompt("What is the weather like?")) {
 
 你可以在 `switch` 块中放置任意数量的 `case` 标签。程序将从对应于 `switch` 值的标签处开始执行，或者如果没有匹配项时，执行 `default` 标签。它会持续执行，甚至跨越其他标签，直到遇到 `break` 语句。在一些情况下，比如例子中 `"sunny"` 的情况，这可以用来在不同情况间共享某些代码(此程序建议在晴天和多云天气都外出：`"Go outside."`)。但是要小心 —— 很容易忘记写 `break`，这会导致程序执行了你并不想执行的代码。
 
+## 字母大写
+
+绑定名称不能包含空格，但是用多个单词来清晰地描述绑定所代表的含义经常非常有帮助。有相当多的选择用来以多个单词写绑定名称：
+
+```js
+fuzzylittleturtle
+fuzzy_little_turtle
+FuzzyLittleTurtle
+fuzzyLittleTurtle
+```
+
+第一种方式阅读起来非常困难。我相当喜欢下划线的样式，尽管敲起来会有点痛苦。标准的`JavaScript`函数以及大多数`JavaScript`程序员，都遵循最下面那种样式 —— 除了第一个外，大写每个单词的首字母。习惯这样的小事不是什么难事，而且混用命名方式来编码会造成难以阅读，所以我们也遵循这个惯例。
+
+在一些情况下，比如 `Number` 函数，绑定的首字母也是大写的。这用来标记这个函数为构造器。构造器是什么，将在[第六章][link_chapter_6]弄清楚。目前来说，重要的是不要因这种不一致而感到烦恼。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_4#array_indexing]: ../Part_1_Language/04_data.md#array_indexing
+[link_chapter_6]: ../Part_1_Language/06_object.md
 [prompt_img]: ../assets/prompt.png
 [controlflow-straight]: ../assets/controlflow-straight.svg
 [controlflow-if]: ../assets/controlflow-if.svg
