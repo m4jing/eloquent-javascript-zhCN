@@ -430,6 +430,32 @@ fuzzyLittleTurtle
 
 在一些情况下，比如 `Number` 函数，绑定的首字母也是大写的。这用来标记这个函数为构造器。构造器是什么，将在[第六章][link_chapter_6]弄清楚。目前来说，重要的是不要因这种不一致而感到烦恼。
 
+## 注释
+
+经常，原始代码不能传递你希望程序传递给人类读者的所有信息，或者代码比较难懂以至于人们可能不能理解。另一些时候，你可能只是想包含一些相关的想法作为程序的一部分。这就是 *注释* 存在的理由。
+
+注释是一段文字，作为程序的一部分但是完全被计算机忽略。`JavaScript`有两种写注释的方式。要写单行注释，你可以用双斜杠(`//`)，随后是注释文字。
+
+```js
+let accountBalance = calculateBalance(account);
+// It's a green hollow where a river sings
+accountBalance.adjust();
+// Madly catching white tatters in the grass.
+let report = new Report();
+// Where the sun on the proud mountain rings:
+addToReport(accountBalance, report);
+// It's a little valley, foaming like light in a glass.
+```
+
+`//` 注释只作用到行尾。`/*` 和 `*/` 之间的一段文字将整体被忽略，不管它是否包含换行。对于添加关于一个文件或一个程序块的信息块很有用。
+
+```js
+/*
+I first found this number scrawled on the back of one of an old notebook. Since then, it has often dropped by, showing up in phone numbers and the serial numbers of products that I've bought. It obviously likes me, so I've decided to keep it.
+*/
+const myNumber = 11213;
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
