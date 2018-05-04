@@ -456,6 +456,16 @@ I first found this number scrawled on the back of one of an old notebook. Since 
 const myNumber = 11213;
 ```
 
+## 总结
+
+现在你知道了：程序由语句构成，而语句本身有时候又会包含更多的语句。语句一般含有表达式，表达式本身可以用更小的表达式构成。
+
+语句跟着语句排列，使得程序从上到下执行。你可以通过使用条件(`if`，`else` 和 `switch`)和循环(`while`，`do` 和 `for`)控制流来引入中断。
+
+绑定用来把数据片段归于一个名称下，对于追踪程序的状态很有用。环境，是指所定义的整套绑定。`JavaScript`系统总会提供很多有用的标准绑定到你的环境中。
+
+函数是封装着程序片段的特殊值。你可以通过 `functionName(argument1, argument2)` 的方式来调用它们。这样的函数调用是一个表达式，并可能生成一个值。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
