@@ -358,6 +358,32 @@ for (let current = 20;; current = current + 1) {
 
 `continue` 关键字跟 `break` 类似，也会影响循环的进程。当在循环体中遇到 `continue`，将会跳出循环体，然后继续循环的下一次迭代。
 
+## 更新绑定的简短方法
+
+程序经常需要基于一个绑定之前的值来“更新”这个绑定，尤其是在循环中。
+
+```js
+counter = counter + 1;
+```
+
+对此，`JavaScript`提供了一个快捷方式：
+
+```js
+counter += 1;
+```
+
+类似的快捷方式也适用于其他操作符，比如 `result *= 2` 来使 `result` 翻倍，或者 `counter -= 1` 来倒数。
+
+这使得我们可以把计数的例子再缩短一点。
+
+```js
+for (let number = 0; number <= 12; number += 2) {
+  console.log(number);
+}
+```
+
+对于 `counter += 1` 和 `counter -= 1`，甚至还有更短的写法：`counter++` 和 `counter--`。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
