@@ -350,6 +350,14 @@ for (let current = 20;; current = current + 1) {
 // → 21
 ```
 
+使用求余操作符(`%`)可以轻松地判断一个数字是否能被另一个数整除。如果能，则他们相除的余数为 0。
+
+例子中的 `for` 结构没有检测循环终止的部分。这意味着循环将永远不会停止，除非其中的 `break` 语句被执行。
+
+如果你删掉那条 `break` 语句，或者不小心写了一个总是生成 `true` 的条件，你的程序将陷入 *无限循环*。陷入无限循环的程序将永不停止地运行，通常来说这不是什么好事。
+
+`continue` 关键字跟 `break` 类似，也会影响循环的进程。当在循环体中遇到 `continue`，将会跳出循环体，然后继续循环的下一次迭代。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
