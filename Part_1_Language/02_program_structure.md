@@ -384,6 +384,37 @@ for (let number = 0; number <= 12; number += 2) {
 
 对于 `counter += 1` 和 `counter -= 1`，甚至还有更短的写法：`counter++` 和 `counter--`。
 
+## 用 `switch` 分发值
+
+经常会有如下的代码：
+
+```js
+if (x == "value1") action1();
+else if (x == "value2") action2();
+else if (x == "value3") action3();
+else defaultAction();
+```
+
+有一个 `switch` 结构专门用于以一种更直接的方式来表达这样的“分发”。不过，`JavaScript`关于这个的语法(继承自 `C/Java` 编程语言)有些尴尬 —— 串联的 `if` 语句也许看起来更好。这里是一个例子：
+
+```js
+switch (prompt("What is the weather like?")) {
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress lightly.");
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unknown weather type!");
+    break;
+}
+```
+
+你可以在 `switch` 块中放置任意数量的 `case` 标签。程序将从对应于 `switch` 值的标签处开始执行，或者如果没有匹配项时，执行 `default` 标签。它会持续执行，甚至跨越其他标签，直到遇到 `break` 语句。在一些情况下，比如例子中 `"sunny"` 的情况，这可以用来在不同情况间共享某些代码(此程序建议在晴天和多云天气都外出：`"Go outside."`)。但是要小心 —— 很容易忘记写 `break`，这会导致程序执行了你并不想执行的代码。
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
