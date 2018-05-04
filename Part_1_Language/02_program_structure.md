@@ -334,6 +334,22 @@ console.log(result);
 // → 1024
 ```
 
+## 退出循环
+
+拥有生成 `false` 的循环条件，不是结束循环的唯一方式。有一条特殊的语句 `break`，会立即跳出当前循环。
+
+这个程序展示了 `break` 语句。它会找到大于等于 20 且能被 7 整除的第一个数字。
+
+```js
+for (let current = 20;; current = current + 1) {
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
+}
+// → 21
+```
+
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
