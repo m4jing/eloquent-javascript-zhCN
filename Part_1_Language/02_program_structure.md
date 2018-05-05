@@ -466,6 +466,13 @@ const myNumber = 11213;
 
 函数是封装着程序片段的特殊值。你可以通过 `functionName(argument1, argument2)` 的方式来调用它们。这样的函数调用是一个表达式，并可能生成一个值。
 
+## 练习
+
+如果你不清楚怎么验证你对练习的解答，可以参考[简介][00_intro]。
+
+每一个练习开头会有一段问题描述。仔细阅读并尝试解答练习。如果遇到问题了，可以考虑查看本书最后的提示。
+
+[00_intro]: ../Part_0_Introduction/00_intro.md
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
