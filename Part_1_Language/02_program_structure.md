@@ -470,7 +470,7 @@ const myNumber = 11213;
 
 如果你不清楚怎么验证你对练习的解答，可以参考[简介][00_intro]。
 
-每一个练习开头会有一段问题描述。仔细阅读并尝试解答练习。如果遇到问题了，可以考虑查看本书最后的提示。
+每一个练习开头会有一段问题描述。仔细阅读并尝试解答练习。如果遇到问题了，可以考虑查看本书最后的提示。本书不包含练习的完整答案，不过你可以在线查找：[https://eloquentjavascript.net/code](https://eloquentjavascript.net/code#2)。如果想通过练习学到些什么，我建议在你已经解答练习之后再看答案，或者至少你已经尝试足够长时间努力解答到有点轻微头疼。
 
 [00_intro]: ../Part_0_Introduction/00_intro.md
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
