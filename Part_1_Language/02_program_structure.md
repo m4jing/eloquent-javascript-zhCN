@@ -500,6 +500,14 @@ console.log(abc.length);
 // Your code here.
 ```
 
+### FizzBuzz
+
+写一个程序：用 `console.log` 打印出从 1 到 100 之间所有的数，不过有两个例外。对可以被 3 整除的数，打印出 `"Fizz"` 而不是那个数字，而对于可以被 5 整除(但不能被 3 整除)的数字，则打印 `"Buzz"`。
+
+当解决了上述问题，则修改你的程序：当数字同时被 3 和 5 整除时，打印 `"FizzBuzz"`(同时，对于其中之一整除的数字，依然打印 `"Fizz"` 或 `"Buzz"`)。
+
+> 这实际上是一道面试题，据说已经淘汰了大批的程序员候选人。所以，如果你解决了它，你的劳动力市场价值将会增长。
+
 [00_intro]: ../Part_0_Introduction/00_intro.md
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
