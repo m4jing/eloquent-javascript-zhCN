@@ -486,6 +486,20 @@ const myNumber = 11213;
 #######
 ```
 
+知道通过在字符串之后写上 `.length` 来找到字符串的长度，也许会很有用。
+
+```js
+let abc = "abc";
+console.log(abc.length);
+// → 3
+```
+
+大多数练习会包含一段代码，你可以修改它以解答相应练习。记住：你可以点击代码块来编辑它们。
+
+```js
+// Your code here.
+```
+
 [00_intro]: ../Part_0_Introduction/00_intro.md
 [chapter_picture_2]: ../assets/chapter_picture_2.jpg
 [link_chapter_1]: ../Part_1_Language/01_values.md
