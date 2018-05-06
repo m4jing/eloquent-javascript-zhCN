@@ -4,6 +4,8 @@
 >
 > -- Master Yuan-Ma, *The Book of Programming*
 
+![chapter_picture_1][chapter_picture_1]
+
 在计算机的世界里，只有数据。你可以读取数据，修改数据和创建新数据。所有的数据以长长的比特序列的形式存储，所以从根本上来说是相似的。
 
 比特是任一种二值的事物，通常描述为 0 和 1。在计算机中，它们可以是或高或低的电荷、或强或弱的信号、CD表面或明或暗的点等形式。任何离散的信息片段都可以简化成 0 和 1 的序列，因此可以用比特表示。
@@ -322,6 +324,7 @@ console.log("Agnes" || "user")
 
 这些已经足够让你把`JavaScript`当成一个便携计算器来使用了，但也仅此而已。[下一章][link_chapter_2]将把这些表达式组合在一起组成基本的程序。
 
+[chapter_picture_1]: ../assets/chapter_picture_1.jpg
 [link_chapter_2]: ../Part_1_Language/02_program_structure.md
 [link_chapter_4]: ../Part_1_Language/04_data.md
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
