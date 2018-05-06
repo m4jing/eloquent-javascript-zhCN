@@ -23,9 +23,9 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 
 ## Contents (内容/目录)
 
-0. [简介][00_intro]
-1. [值，类型和操作符][01_values]
-1. 程序结构
+0. [简介][link_chapter_0]
+1. [值，类型和操作符][link_chapter_1]
+1. [程序结构][link_chapter_2]
 1. 函数
 1. 数据结构：对象和数组
 1. 高阶函数
@@ -51,5 +51,6 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 [mit]: http://opensource.org/licenses/MIT
 [ejs]: http://eloquentjavascript.net/
 [ejs2]: https://www.amazon.com/Eloquent-JavaScript-2nd-Ed-Introduction/dp/1593275846
-[00_intro]: Part_0_Introduction/00_intro.md
-[01_values]: Part_1_Language/01_values.md
+[link_chapter_0]: Part_0_Introduction/00_intro.md
+[link_chapter_1]: Part_1_Language/01_values.md
+[link_chapter_2]: Part_1_Language/02_program_structure.md
