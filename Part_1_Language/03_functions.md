@@ -86,4 +86,32 @@ console.log(n);
 // → 10
 ```
 
+### 嵌套作用域
+
+`JavaScript`不仅仅区分 *全局* 和 *局部* 绑定。块和函数能在其他块和函数中创建，形成了多层的局部性。
+
+比如，这个函数 —— 输出制作一批鹰嘴豆泥所需的原料，其中含有另一个函数：
+
+```js
+const hummus = function(factor) {
+  const ingredient = function(amount, unit, name) {
+    let ingredientAmount = amount * factor;
+    if (ingredientAmount > 1) {
+      unit += "s";
+    }
+    console.log(`${ingredientAmount} ${unit} ${name}`);
+  };
+  ingredient(1, "can", "chickpeas");
+  ingredient(0.25, "cup", "tahini");
+  ingredient(0.25, "cup", "lemon juice");
+  ingredient(1, "clove", "garlic");
+  ingredient(2, "tablespoon", "olive oil");
+  ingredient(0.5, "teaspoon", "cumin");
+};
+```
+
+`ingredient` 函数中的代码可以看到来自外层函数的 `factor` 绑定。但是它的局部搬到，比如 `unit` 或者 `ingredientAmount`，在外层函数中是不可见的。
+
+简言之，每一个局部作用域也可以看到所有包含它的局部作用域。块中可见的绑定集合，由这个块在程序中的位置所决定。所有来自 *周围* 块的绑定是可见的 —— 包括围绕在周围的块中的绑定和在程序顶层的那些。绑定可见性的这种方式叫作 *词法作用域*。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
