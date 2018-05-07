@@ -114,4 +114,22 @@ const hummus = function(factor) {
 
 简言之，每一个局部作用域也可以看到所有包含它的局部作用域。块中可见的绑定集合，由这个块在程序中的位置所决定。所有来自 *周围* 块的绑定是可见的 —— 包括围绕在周围的块中的绑定和在程序顶层的那些。绑定可见性的这种方式叫作 *词法作用域*。
 
+## 作为值的函数
+
+函数绑定通常只是作为一段特殊的程序的名称。这样的绑定只定义一次且不再改变。这样就很容易混淆函数和它的名称。
+
+但是这两者是不同的。一个函数值可以做所有其他值能做的事情 —— 你可以在任意表达式中使用它，不仅仅是调用它。也可以把一个函数值保存到一个新的绑定，将其作为参数传给一个函数，等等。同样地，持有一个函数的绑定也仅仅是一个常规的绑定，如果不是常量的话，可以对其赋一个新值，像这样：
+
+```js
+let launchMissiles = function() {
+  missileSystem.launch("now");
+};
+if (safeMode) {
+  launchMissiles = function() {/* do nothing */};
+}
+```
+
+在[第五章][link_chapter_5]，我们将讨论通过把函数传入其他函数所能做的有趣的事情。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
+[link_chapter_5]: ../Part_1_Language/05_higher_order.md
