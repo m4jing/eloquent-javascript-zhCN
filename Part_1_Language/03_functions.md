@@ -131,5 +131,29 @@ if (safeMode) {
 
 在[第五章][link_chapter_5]，我们将讨论通过把函数传入其他函数所能做的有趣的事情。
 
+## 声明记法
+
+有一个略微简短的方式来创建函数绑定。当 `function` 关键字用在语句的开头时，会有些不同。
+
+```js
+function square(x) {
+  return x * x;
+}
+```
+
+这是一个函数 *声明*。这条语句定义了 `square` 绑定并使其指向特定的函数。这样写起来稍微简单一点，并且不需要在函数后加分号。
+
+这种形式的函数定义有一个微妙之处。
+
+```js
+console.log("The future says:", future());
+
+function future() {
+  return "You'll never have flying cars";
+}
+```
+
+这段代码正常工作，即使函数是在调用代码 *下面* 定义的。函数声明不属于常规自上而下控制流的一部分。从概念上说，它们被转移到作用域的顶端，并可被那个作用域中的所有代码使用。有时候这很有用，因为我们可以自由地、以看起来有意义的方式组织代码，而不用担心必须在使用之前定义所有的函数。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
