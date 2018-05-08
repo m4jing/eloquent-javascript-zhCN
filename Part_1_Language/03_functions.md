@@ -155,5 +155,39 @@ function future() {
 
 这段代码正常工作，即使函数是在调用代码 *下面* 定义的。函数声明不属于常规自上而下控制流的一部分。从概念上说，它们被转移到作用域的顶端，并可被那个作用域中的所有代码使用。有时候这很有用，因为我们可以自由地、以看起来有意义的方式组织代码，而不用担心必须在使用之前定义所有的函数。
 
+## 箭头函数
+
+有第三种函数的记法，看起来和其他的非常不一样。它不用 `function` 关键字，而是用由等号和大于号组成的箭头(`=>`)。不要跟“大于等于”(`>=`)操作符混淆。
+
+```js
+const power = (base, exponent) => {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+};
+```
+
+箭头在参数列表 *之后*，随后是函数体。看起来像是“这个输入(参数)产生了这个结果(函数体)”。
+
+当只有一个参数时，参数列表周围的括号可以省略。如果函数体是一个表达式而不是大括号中的一个块，这个表达式会被此函数返回。因此，这两个 `square` 的定义是一样的：
+
+```js
+const square1 = (x) => { return x * x; };
+const square2 = x => x * x;
+```
+
+当箭头函数完全没有参数时，它的参数列表就是一对空括号。
+
+```js
+const horn = () => {
+  console.log("Toot");
+};
+```
+
+没有足够的理由需要在语言中同时拥有箭头函数和 `function` 表达式。除了一些小细节(我们将在[第六章][link_chapter_6]讨论)，它们是一样的。箭头函数在 2015 年被添加，主要是为了以简洁的方式来写函数表达式。我们在[第五章][link_chapter_5]中会大量用到它们。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
+[link_chapter_6]: ../Part_1_Language/06_object.md
