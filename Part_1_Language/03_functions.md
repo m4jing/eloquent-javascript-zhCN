@@ -309,6 +309,26 @@ console.log(wrap2());
 
 这是允许的，并正如你希望的那样工作 —— 绑定的各个实例依然可以被访问。这个情形很好地说明了局部绑定在每一次调用时都会重建、并且不同的调用不会互相干扰各自的局部绑定的事实。
 
+这个特性 —— 能够引用作用域中局部绑定的特定实例，叫作 *闭包*。一个封装了某些局部绑定的函数叫作 *一个* 闭包。这不仅让你不必再担心绑定的生命周期，而且也让创造性地使用函数成为可能。
+
+稍微调整，我们可以把之前的例子转换为创建与任意数目相乘的函数的一种方式。
+
+```js
+function multiplier(factor) {
+  return number => number * factor;
+}
+
+let twice = multiplier(2);
+console.log(twice(5));
+// → 10
+```
+
+`wrapValue` 例子中显式的 `local` 绑定不是必需的，因为参数本身就是一个局部绑定。
+
+像这样思考程序需要一些练习。一个好的思想模型是 —— 把函数想成既包括函数体中的代码，也包括它们被创建时所处的环境。当调用时，函数体看到的是原始的环境，而不是调用发生时的环境。
+
+在这个例子中，`multiplier` 被调用并创建了一个环境，在这个环境中，`factor` 参数被绑定为 2。它所返回的保存在 `twice` 中的函数值，会记住这个环境。因此，当它被调用时，就会对其参数乘以 2。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
