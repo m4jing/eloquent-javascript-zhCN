@@ -214,6 +214,23 @@ not in function
 not in function
 ```
 
+因为函数在返回时必须跳回到调用它的地方，计算机就得记住本次调用发生时的上下文。一种情况里，`console.log` 结束时要回到 `greet` 函数。另一种情况下，它回到了程序的结尾。
+
+计算机存储这个上下文的地方就叫作 *调用栈*。每当一个函数被调用，当前的上下文就被存储在当前“栈”之上。当函数返回时，就删除栈顶层的上下文，并以此继续执行。
+
+存储这个栈需要耗费计算机内存空间。当栈变得太大时，计算机将无法正常工作并报错“栈空间不足”或“太多循环”。下面的代码通过问计算机极其困难的问题演示了这一点，这将会导致两个函数间的无限循环。当然了，如果计算机有无限大的栈，那它 *将* 是无限的。现实是，我们将耗尽空间，或者“爆栈”。
+
+```js
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+console.log(chicken() + " came first.");
+// → ??
+```
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
