@@ -231,6 +231,63 @@ console.log(chicken() + " came first.");
 // → ??
 ```
 
+## 可选参数
+
+如下代码是允许的，运行起来毫无问题：
+
+```js
+function square(x) { return x * x; }
+console.log(square(4, true, "hedgehog"));
+// → 16
+```
+
+我们定义的 `square` 只有 1 个参数。但是在调用时却用了 3 个，语言正常执行。多余的参数被忽略并计算出第一个的平方。
+
+`JavaScript` 对于你传进函数的参数个数是非常大度的。如果你传的太多，多余的就会被忽略。如果传的太少，缺失的参数将被赋值为 `undefined`。
+
+这样做的缺点是 —— 很可能你会给函数传入错误数量的参数，而没有人会告诉你。
+
+优点是 —— 这个行为使得函数可以以不同数量的参数被调用。比如这个 `minus` 函数 —— 尝试模仿 `-` 操作符：对于 1 或 2 个参数都工作。
+
+```js
+function minus(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(minus(10));
+// → -10
+console.log(minus(10, 5));
+// → 5
+```
+
+如果在一个参数之后写上 `=` 操作符和一个表达式，这个表达式的值会代替此未提供的参数。
+
+比如，这个版本的 `power` 使其第二个参数可选。如果你没有提供它或者传入 `undefined` 值，它将默认为 2，此时其行为跟 `square` 很像。
+
+```js
+function power(base, exponent = 2) {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+}
+
+console.log(power(4));
+// → 16
+console.log(power(2, 6));
+// → 64
+```
+
+在[下一章][link_chapter_4#rest_parameters]，我们会看到在函数体中获取所传入的完整参数列表的一种方式。这很有用，因为它使得函数可以接收任意数量的参数。比如，`console.log` 就是这么做的 —— 它会输出传给它的所有值。
+
+```js
+console.log("C", "O", 2);
+// → C O 2
+```
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
+[link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
