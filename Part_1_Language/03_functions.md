@@ -188,6 +188,32 @@ const horn = () => {
 
 没有足够的理由需要在语言中同时拥有箭头函数和 `function` 表达式。除了一些小细节(我们将在[第六章][link_chapter_6]讨论)，它们是一样的。箭头函数在 2015 年被添加，主要是为了以简洁的方式来写函数表达式。我们在[第五章][link_chapter_5]中会大量用到它们。
 
+## 调用栈
+
+函数间的控制流动有些复杂。我们来仔细查看一下。这里是一个有一些函数调用的简单程序：
+
+```js
+function greet(who) {
+  console.log("Hello " + who);
+}
+greet("Harry");
+console.log("Bye");
+```
+
+这个程序的流程大概像这样：对 `greet` 的调用使得控制跳到该函数的开头(第 2 行)。这个函数调用了 `console.log`，它会接管控制并完成任务，然后把控制权返回到第 2 行。此时抵达了 `greet` 函数的末尾，所以它会返回到调用它的地方，也就是第 4 行。接下来的那一行又调用了 `console.log`。在这次调用返回后，程序结束。
+
+我们可以用下图展示控制流：
+
+```
+not in function
+   in greet
+        in console.log
+   in greet
+not in function
+   in console.log
+not in function
+```
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
