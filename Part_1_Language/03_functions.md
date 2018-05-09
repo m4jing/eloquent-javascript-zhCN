@@ -287,6 +287,28 @@ console.log("C", "O", 2);
 // → C O 2
 ```
 
+## 闭包
+
+把函数当作值的能力，结合每次函数被调用时局部绑定都会重建的事实，会引发一个有趣的问题。函数调用不再活跃时，它所创建的局部绑定会发生什么？
+
+下面的代码展示了这样的一个例子。它定义了一个函数 `wrapValue`，会创建一个局部绑定。随后，它会返回一个访问并返回这个局部绑定的函数。
+
+```js
+function wrapValue(n) {
+  let local = n;
+  return () => local;
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
+```
+
+这是允许的，并正如你希望的那样工作 —— 绑定的各个实例依然可以被访问。这个情形很好地说明了局部绑定在每一次调用时都会重建、并且不同的调用不会互相干扰各自的局部绑定的事实。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
