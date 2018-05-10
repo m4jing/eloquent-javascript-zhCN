@@ -329,6 +329,23 @@ console.log(twice(5));
 
 在这个例子中，`multiplier` 被调用并创建了一个环境，在这个环境中，`factor` 参数被绑定为 2。它所返回的保存在 `twice` 中的函数值，会记住这个环境。因此，当它被调用时，就会对其参数乘以 2。
 
+## 递归
+
+函数调用自身是完全可以的，只要它不过于如此以至于栈溢出。调用自身的函数叫作 *递归*。递归使得一些函数可以写成不同的形式。比如，`power` 的另一个实现：
+
+```js
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+console.log(power(2, 3));
+// → 8
+```
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
