@@ -430,6 +430,76 @@ find(1, "1")
 011 Chickens
 ```
 
+这需要一个有 2 个参数(奶牛的数量和小鸡的数量)的函数。我们开始编码吧。
+
+```js
+function printFarmInventory(cows, chickens) {
+  let cowString = String(cows);
+  while (cowString.length < 3) {
+    cowString = "0" + cowString;
+  }
+  console.log(`${cowString} Cows`);
+  let chickenString = String(chickens);
+  while (chickenString.length < 3) {
+    chickenString = "0" + chickenString;
+  }
+  console.log(`${chickenString} Chickens`);
+}
+printFarmInventory(7, 11);
+```
+
+字符串表达式后写上 `.length` 将告诉我们此字符串的长度。因此，`while` 循环持续在数字字符串之前加 0，直到字符长度为 3。
+
+任务完成了！但是当我们准备把代码(以及一张大发票)发给农场主时，她打电话过来说她已经开始养猪了，问能不能扩展软件，把猪也打印出来？
+
+我们当然可以。但是正当我们再一次复制、黏贴那 4 行代码时，我们停下来仔细想了想。必须有一种更好的方法。这里是第一次尝试：
+
+```js
+function printZeroPaddedWithLabel(number, label) {
+  let numberString = String(number);
+  while (numberString.length < 3) {
+    numberString = "0" + numberString;
+  }
+  console.log(`${numberString} ${label}`);
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  printZeroPaddedWithLabel(cows, "Cows");
+  printZeroPaddedWithLabel(chickens, "Chickens");
+  printZeroPaddedWithLabel(pigs, "Pigs");
+}
+
+printFarmInventory(7, 11, 3);
+```
+
+搞定！但是这个名称，`printZeroPaddedWithLabel`，有点令人尴尬。它把 3 件事混在了一起 —— 打印，填充 0，以及添加标签 —— 都放在了同一个函数中。
+
+不再大规模地提取出程序中重复的部分了，我们来凸显单一的 *概念*。
+
+```js
+function zeroPad(number, width) {
+  let string = String(number);
+  while (string.length < width) {
+    string = "0" + string;
+  }
+  return string;
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  console.log(`${zeroPad(cows, 3)} Cows`);
+  console.log(`${zeroPad(chickens, 3)} Chickens`);
+  console.log(`${zeroPad(pigs, 3)} Pigs`);
+}
+
+printFarmInventory(7, 16, 3);
+```
+
+一个有着像 `zeroPad` 这样优雅简洁名称的函数，使得阅读代码的人更容易搞清楚程序都做了什么。而且这样的一个函数在更多情况下(不仅是这个特定的程序)都很有用。比如，你可以用它来辅助打印精美排列的数字表格。
+
+我们的函数 *应该* 多智能和通用？我们可以写任何东西，从一个只能填充数字为 3 个字符宽度的超简单函数，到一个能处理小数、负数、小数点的排列、用不同字符填充等等的复杂的、普适的数字格式化系统。
+
+一个有用的原则是：不要过度添加，除非你确信你会用到它。对于你碰到的每一个功能写一个通用的“框架”是很诱人的。不要冲动！你并不会搞定什么实际的工作，而只是在写你从来不会用到的代码。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
