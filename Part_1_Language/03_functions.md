@@ -500,6 +500,12 @@ printFarmInventory(7, 16, 3);
 
 一个有用的原则是：不要过度添加，除非你确信你会用到它。对于你碰到的每一个功能写一个通用的“框架”是很诱人的。不要冲动！你并不会搞定什么实际的工作，而只是在写你从来不会用到的代码。
 
+## 函数与副作用
+
+函数可大致分为利用其副作用的和利用其返回值的。(尽管同时具有副作用和返回值是完全有可能的。)
+
+在农场例子中，第一个辅助函数 `printZeroPaddedWithLabel` 因其副作用而被调用：它会打印一行信息。第二版的 `zeroPad` 因其返回值而被调用。第二种在更多的情景中比第一种有用，这并非偶然。创建值的函数比直接产生副作用的函数更易于以新的方式组合起来。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
