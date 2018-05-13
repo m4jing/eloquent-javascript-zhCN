@@ -506,6 +506,8 @@ printFarmInventory(7, 16, 3);
 
 在农场例子中，第一个辅助函数 `printZeroPaddedWithLabel` 因其副作用而被调用：它会打印一行信息。第二版的 `zeroPad` 因其返回值而被调用。第二种在更多的情景中比第一种有用，这并非偶然。创建值的函数比直接产生副作用的函数更易于以新的方式组合起来。
 
+*纯* 函数是一种特殊的生成值的函数，不仅没有副作用，而且也不依赖于来自其它代码的副作用 —— 比如，它不会读取值可能变化的全局绑定。纯函数有着优秀的属性 —— 当以同样的参数调用时，它总是生成同样的值(而且不会做其它任何事情)。这种函数的调用，可以用它的返回值来替换掉而不会改变代码的含义。如果不确定一个纯函数是否正常运行，可以通过调用它来测试，然后就知道了：如果在那个上下文中它正常运行，则在任何上下文中都能正常运行。非纯函数的测试则一般需要更多准备工作。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
