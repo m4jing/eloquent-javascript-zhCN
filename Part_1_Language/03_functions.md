@@ -533,6 +533,12 @@ let h = a => a % 3;
 
 把程序要执行的任务分解为不同的函数非常有用。不需要过多重复，函数会把代码组成能执行指定任务的片段，以此协助组织程序。
 
+## 练习
+
+### 最小值
+
+[上一章][]介绍了能返回其最小参数的标准函数 `Math.min`。现在我们可以创建类似的函数。写一个函数 `min`：有 2 个参数，返回其中最小值。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
