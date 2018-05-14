@@ -510,6 +510,29 @@ printFarmInventory(7, 16, 3);
 
 不过，也没必要因写了非纯函数而感觉糟糕，或者大动干戈地从代码里清除掉它们。副作用经常很有用。比如，没办法写出一个纯函数版的 `console.log`，而 `console.log` 本身非常好用。一些操作在使用副作用时更易于以有效的方式来表达，所以，计算速度也是一个使用非纯函数的理由。
 
+## 总结
+
+本章教了你如何写出自己的函数。`function` 关键字，在作为表达式使用时，会创建一个函数值。当作为语句使用时，可以用来声明绑定并将一个函数作为值赋给它。箭头函数是创建函数的另一个方式。
+
+```js
+// 定义 f 持有一个函数值
+const f = function(a) {
+  console.log(a + 2);
+};
+
+// 声明 g 为一个函数
+function g(a, b) {
+  return a * b * 3.5;
+}
+
+// 简明的函数值
+let h = a => a % 3;
+```
+
+理解函数的关键方面，是理解作用域。每个块都会创建一个新的作用域。在一个特定的作用域中声明的参数和绑定是局部的，对外部不可见。用 `var` 声明的绑定行为就不一样了 —— 它们会出现在最近的函数作用域或者全局作用域中。
+
+把程序要执行的任务分解为不同的函数非常有用。不需要过多重复，函数会把代码组成能执行指定任务的片段，以此协助组织程序。
+
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
