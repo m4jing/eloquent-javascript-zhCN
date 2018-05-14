@@ -539,6 +539,15 @@ let h = a => a % 3;
 
 [上一章][]介绍了能返回其最小参数的标准函数 `Math.min`。现在我们可以创建类似的函数。写一个函数 `min`：有 2 个参数，返回其中最小值。
 
+```js
+// Your code here.
+
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+```
+
 ### 递归
 
 我们已经看到 `%` (求余操作符)可以用来通过 `% 2` 来看一个数是否被 2 整除，来检测这个数是偶数还是奇数。这里是判断一个正整数是偶数还是奇数的另外一种方法：
@@ -550,6 +559,34 @@ let h = a => a % 3;
 根据这段描述定义一个递归函数 `isEven`。该函数应该接受一个参数(一个正整数)并返回一个布尔值。
 
 用数字 50 和 75 来测试此函数。并看看对于 -1 它的行为如何。为什么？你能想出方法解决这个问题吗？
+
+```js
+// Your code here.
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → ??
+```
+
+### 数豆子
+
+可以通过 `"string"[N]` 获取字符串中的第 N 个字符或字母。返回值是只含有一个字符(比如 `"b"`)的字符串。第一个字符位置为 0，则最后一个的位置为 `string.length - 1`。换句话说，一个两个字符的字符串长度为 2，它的字符位置为 0 和 1。
+
+写一个函数 `countBs`，以一个字符串为唯一的参数，返回一个数字来表示这个字符串中有多少个大写的“B”字符。
+
+接下来，写一个函数 `countChar`，其行为类似于 `countBs`，除了它有第二个参数来表示要计数的字符(而不是只计数大写的“B”字符)。使用此函数重写 `countBs`。
+
+```js
+// Your code here.
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+```
 
 [chapter_picture_3]: ../assets/chapter_picture_3.jpg
 [link_chapter_4#rest_parameters]: ../Part_1_Language/04_data.md#rest_parameters
