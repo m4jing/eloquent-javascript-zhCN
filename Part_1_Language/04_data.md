@@ -30,4 +30,17 @@ console.log(listOfNumbers[2 - 1]);
 
 数组的第一个索引是 0，而不是 1。因此，第一个元素用 `listOfNumbers[0]` 获取。基于 0 的计数在技术领域有着悠久的传统，在一定情况下很有道理，但是需要多多习惯。可以把索引想成：从数组开头数起，要略过的项的数量。
 
+## 属性
+
+在过去的章节中，我们看到过看似可疑的表达式，如 `myString.length` (获取字符串的长度) 和 `Math.max` (最大值函数)。这些是访问某些值 *属性* 的表达式。在第一种情况里，我们访问了值 `myString` 的 `length` 属性。在第二个中，我们访问了 `Math` 对象(一个数学相关的常量和函数的集合)的 `max` 方法。
+
+几乎所有的`JavaScript`值都有属性。`null` 和 `undefined` 例外。如果你试着访问其中之一的属性，将报错。
+
+```js
+null.length;
+// → TypeError: null has no properties
+```
+
+`JavaScript`中访问属性的 2 种典型方法是用点号和用方括号。`value.x` 和 `value[x]` 都会访问 `value` 的属性 —— 但不一定是同一个属性。区别在于 `x` 是如何解析的。当用点号时，点号后面的单词就是属性的字面名称。当用方括号时，括号中的表达式被求值以获得属性名称。`value.x` 获取的是 `value` 的名为 “x” 的属性，而 `value[x]` 会对 `x` 求值，并把这个结果作为属性名。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
