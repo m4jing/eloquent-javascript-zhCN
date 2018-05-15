@@ -61,4 +61,30 @@ console.log(doh.toUpperCase());
 // → DOH
 ```
 
+每个字符串都有 `toUpperCase` 属性。当调用时，它会返回该字符串所有字母都被转化为大写的一个拷贝。也有 `toLowerCase`，作用相反。
+
+有趣的是，即使对 `toUpperCase` 的调用没有传递任何参数，该函数也能访问字符串 `"Doh"`，而我们调用的是它的属性。关于这一点的来龙去脉将在[第六章][link_chapter_6]描述。
+
+包含函数值的属性通常被叫作它们所属值的 *方法*。在这里，“`toUpperCase` 是字符串的一个方法”。
+
+这个例子演示了 2 个可以用来操作数组的方法：
+
+```js
+let sequence = [1, 2, 3];
+sequence.push(4);
+sequence.push(5);
+console.log(sequence);
+// → [1, 2, 3, 4, 5]
+console.log(sequence.pop());
+// → 5
+console.log(sequence);
+// → [1, 2, 3, 4]
+```
+
+`push` 方法向数组末端添加值，而 `pop` 方法则相反：删除数组中最后一个值并返回它。
+
+这些名称是描述 *栈* 上的操作所用的传统术语。在编程中，栈是一种数据结构，允许你向其中压入值，再以相反的顺序弹出值，因此最后添加的内容会被首先移除。这些在编程中很普遍 —— 你可能还记得[上一章][link_chapter_3]中的函数调用栈，就是同样概念的一个实例。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
+[link_chapter_3]: ../Part_1_Language/03_functions.md
+[link_chapter_6]: ../Part_1_Language/06_object.md
