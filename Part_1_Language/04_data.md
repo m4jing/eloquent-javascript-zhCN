@@ -85,6 +85,26 @@ console.log(sequence);
 
 这些名称是描述 *栈* 上的操作所用的传统术语。在编程中，栈是一种数据结构，允许你向其中压入值，再以相反的顺序弹出值，因此最后添加的内容会被首先移除。这些在编程中很普遍 —— 你可能还记得[上一章][link_chapter_3]中的函数调用栈，就是同样概念的一个实例。
 
+## 对象
+
+回到 weresquirrel 的故事。一系列的日志记录可以用一个数组来表示。但是记录不会只由一个数字或字符串组成 —— 每条记录需要存储一个活动列表和一个标识雅克是否变成了松鼠的布尔值。理想情况下，我们希望把这些信息组合到一个值里，然后把组合值放入日志记录的数组里。
+
+*对象* 类型的值是任意属性的集合。创建对象的一种方法是用大括号作为表达式。
+
+```js
+let day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running"]
+};
+console.log(day1.squirrel);
+// → false
+console.log(day1.wolf);
+// → undefined
+day1.wolf = false;
+console.log(day1.wolf);
+// → false
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
