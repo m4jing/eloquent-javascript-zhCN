@@ -49,4 +49,16 @@ null.length;
 
 数组的 `length` 属性告诉我们它有多少个元素。这个属性名是一个合法的绑定名称，并且我们事先知道它的名称，因此，要找到数组的长度，一般会用 `array.length`，因为这比写 `array["length"]` 更容易。
 
+## 方法
+
+除了 `length` 属性，字符串和数组对象都含有很多持有函数值的属性。
+
+```js
+let doh = "Doh";
+console.log(typeof doh.toUpperCase);
+// → function
+console.log(doh.toUpperCase());
+// → DOH
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
