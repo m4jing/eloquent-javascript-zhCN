@@ -105,6 +105,23 @@ console.log(day1.wolf);
 // → false
 ```
 
+在大括号中，有逗号隔开的属性列表。每个属性都有一个名称，随后是冒号和值。当对象写成多行时，像例子中那么进行缩进有助于提高可读性。属性名不是合法的绑定名或数字时，必须用引号引起来。
+
+```js
+let descriptions = {
+  work: "Went to work",
+  "touched tree": "Touched a tree"
+};
+```
+
+这意味着大括号在`JavaScript`中有 *2* 种含义。在语句开头时，它们会开启一个语句块。在任何其他位置时，它们描述对象。幸运的是，以对象开头来开始一条语句几乎没什么用，所以二者之间的这个不明确之处并不是什么大问题。
+
+读取不存在的属性会给你 `undefined` 值。
+
+也可以用 `=` 操作符对属性表达式进行赋值。如果属性存在，则替换掉它的值，否则就给这个对象创建一个新的属性。
+
+回到绑定的触须模型 —— 属性绑定也是类似的。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
