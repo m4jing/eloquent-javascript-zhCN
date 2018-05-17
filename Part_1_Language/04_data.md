@@ -120,7 +120,22 @@ let descriptions = {
 
 也可以用 `=` 操作符对属性表达式进行赋值。如果属性存在，则替换掉它的值，否则就给这个对象创建一个新的属性。
 
-回到绑定的触须模型 —— 属性绑定也是类似的。
+回到绑定的触须模型 —— 属性绑定也是类似的。它们 *抓住* 了值，但是其他绑定和属性也可能持有那些相同的值。可以把对象想成有任意多触须的章鱼，每一条触须都对应一个名称。
+
+`delete` 操作符会砍掉这样一条章鱼的一根触须。它是一个一元操作符，当应用于一个属性访问表达式时，将从对象中删除对应名称的属性。这个操作不常用，但是是可能的。
+
+```js
+let anObject = {left: 1, right: 2};
+console.log(anObject.left);
+// → 1
+delete anObject.left;
+console.log(anObject.left);
+// → undefined
+console.log("left" in anObject);
+// → false
+console.log("right" in anObject);
+// → true
+```
 
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
