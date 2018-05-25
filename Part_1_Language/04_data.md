@@ -155,6 +155,25 @@ console.log(objectA);
 // → {a: 1, b: 3, c: 4}
 ```
 
+数组，是对象的一种特例，用来存储序列值。如果你对 `typeof []` 求值，会生成 `"object"`。你可以把它们看作长长的、扁平的章鱼：其所有的触手整齐排列，并以数字进行标注。
+
+我们把雅克的日志表示为一个由对象所组成的数组。
+
+```js
+let journal = [
+  {events: ["work", "touched tree", "pizza",
+            "running", "television"],
+   squirrel: false},
+  {events: ["work", "ice cream", "cauliflower",
+            "lasagna", "touched tree", "brushed teeth"],
+   squirrel: false},
+  {events: ["weekend", "cycling", "break", "peanuts",
+            "beer"],
+   squirrel: true},
+  /* and so on... */
+];
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
