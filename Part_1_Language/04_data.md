@@ -146,6 +146,15 @@ console.log(Object.keys({x: 0, y: 0, z: 2}));
 // → ["x", "y", "z"]
 ```
 
+有一个 `Object.assign` 函数，用来把一个对象的所有属性复制到另一个对象。
+
+```js
+let objectA = {a: 1, b: 2};
+Object.assign(objectA, {b: 3, c: 4});
+console.log(objectA);
+// → {a: 1, b: 3, c: 4}
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
