@@ -137,6 +137,8 @@ console.log("right" in anObject);
 // → true
 ```
 
+二元操作符 `in` 作用于一个字符串和一个对象时，会告诉你这个对象是否有此属性。把属性设置为 `undefined` 和真正把它删掉的区别在于：第一种情况下，那个对象仍然 *拥有* 此属性(只是它的值没什么意义)，而第二种情况中，该属性就不复存在了，`in` 将返回 `false`。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
