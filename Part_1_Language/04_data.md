@@ -215,6 +215,18 @@ score = {visitors: 1, home: 1};
 
 当你用`JavaScript`的 `==` 操作符来比较对象时，只有当两个对象精确地相同时才会返回 `true`。比较不同的对象将返回 `false`，即使他们有着完全一样的属性。`JavaScript`没有内置“深度”比较的操作：通过内容来比较对象，但是你可以自己写一个（这将是本章末尾的[习题][link_chapter_4#exercise_deep_compare]之一）。
 
+## 狼人日志
+
+雅克开启了他的`JavaScript`解析器，并设置了保存其日志所需的环境。
+
+```js
+let journal = [];
+
+function addEntry(events, squirrel) {
+  journal.push({events, squirrel});
+}
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
