@@ -203,6 +203,19 @@ console.log(object3.value);
 
 `object1` 和 `object2` 绑定抓取了 *相同的* 对象，这就是为什么改变 `object1` 也会改变 `object2` 的值。`object3` 指向了一个不同的对象，初始时含有与 `object1` 相同的属性但是相互独立。
 
+绑定也可以是可变的或是不变的，但是这得跟它们的值的行为方式分开。即使数字值不能改变，你仍然可以用 `let` 绑定通过改变它所指向的值来追踪一个变化的数字。同样地，尽管一个对于对象的 `const` 绑定本身不能改变，会持续指向同样的对象，但是该对象的 *内容* 可能会改变。
+
+```js
+const score = {visitors: 0, home: 0};
+// This is okay
+score.visitors = 1;
+// This isn't allowed
+score = {visitors: 1, home: 1};
+```
+
+当你用`JavaScript`的 `==` 操作符来比较对象时，只有当两个对象精确地相同时才会返回 `true`。比较不同的对象将返回 `false`，即使他们有着完全一样的属性。`JavaScript`没有内置“深度”比较的操作：通过内容来比较对象，但是你可以自己写一个（这将是本章末尾的[习题][link_chapter_4#exercise_deep_compare]之一）。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
+[link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
 [link_chapter_6]: ../Part_1_Language/06_object.md
