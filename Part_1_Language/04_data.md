@@ -180,6 +180,29 @@ let journal = [
 
 我们看到了：对象值可以被修改。前面章节中讨论的值类型，比如：数字、字符串和布尔值，都是 *不可变的* —— 不能更改这些类型的值。你可以组合它们、从中派生出新的值，但一旦你设置了一个指定的字符串值，这个值将永远保持不变。其中的文本是不会变的。假如你有一个包含 `"cat"` 的字符串，不可能有其他代码来更改这个字符串中的字符，使其拼写为 `"rat"`。
 
+一个对象值的内容 *可以* 以改变其属性的方式被修改。
+
+对于两个数字 120 和 120，我们可以认为它们精确地相等，不管它们是否指的是同样的比特。对于对象来说，相同对象的两个引用和含有相同属性的两个不同对象之间存在着差异。考虑如下代码：
+
+```js
+let object1 = {value: 10};
+let object2 = object1;
+let object3 = {value: 10};
+
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+
+object1.value = 15;
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10
+```
+
+`object1` 和 `object2` 绑定抓取了 *相同的* 对象，这就是为什么改变 `object1` 也会改变 `object2` 的值。`object3` 指向了一个不同的对象，初始时含有与 `object1` 相同的属性但是相互独立。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
