@@ -227,6 +227,8 @@ function addEntry(events, squirrel) {
 }
 ```
 
+注意：添加到日志中的对象看起来有点奇怪。它没有像 `events: events` 这样来声明属性，而是只给出了属性名。这是相同事情的一个快捷方式
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
