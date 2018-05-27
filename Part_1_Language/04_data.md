@@ -227,7 +227,22 @@ function addEntry(events, squirrel) {
 }
 ```
 
-注意：添加到日志中的对象看起来有点奇怪。它没有像 `events: events` 这样来声明属性，而是只给出了属性名。这是相同事情的一个快捷方式
+注意：添加到日志中的对象看起来有点奇怪。它没有像 `events: events` 这样来声明属性，而是只给出了属性名。这是相同事情的一个快捷方式 —— 在大括号记法中，如果属性名后没有值，那么它的值将从同名的绑定中获取。
+
+因此，每天晚上 10 点 —— 或第二天早晨的某个时候，在从书架的顶层爬下来之后 —— 雅克记录了这一天。
+
+```js
+addEntry(["work", "touched tree", "pizza", "running",
+          "television"], false);
+addEntry(["work", "ice cream", "cauliflower", "lasagna",
+          "touched tree", "brushed teeth"], false);
+addEntry(["weekend", "cycling", "break", "peanuts",
+          "beer"], true);
+```
+
+一旦他有了足够的数据点，他就想用统计学来弄清楚哪些事项跟松鼠事件可能相关。
+
+*相关性* 是统计变量之间依赖性的一种测量。统计变量不完全跟程序变量相同。在统计学中，通常会有一系列 *量度*，每个变量会针对每种量度进行测量。变量之间的相关性通常以 -1 到 1 范围内的一个值来表示。0 相关性意味着变量之间不相关。相关性为 1 表示两个变量完全相关 —— 只有你知道一个，你也就知道了另一个。-1 表示变量完全相关，但是方向相反 —— 当一个为真时，另一个为假。
 
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
