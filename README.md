@@ -26,8 +26,8 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 0. [简介][link_chapter_0]
 1. [值，类型和操作符][link_chapter_1]
 1. [程序结构][link_chapter_2]
-1. 函数
-1. 数据结构：对象和数组
+1. [函数][link_chapter_3]
+1. [数据结构：对象和数组][link_chapter_4]
 1. 高阶函数
 1. The Secret Life of Objects
 1. Project: A Robot
@@ -54,3 +54,5 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 [link_chapter_0]: Part_0_Introduction/00_intro.md
 [link_chapter_1]: Part_1_Language/01_values.md
 [link_chapter_2]: Part_1_Language/02_program_structure.md
+[link_chapter_3]: Part_1_Language/03_functions.md
+[link_chapter_4]: Part_1_Language/04_data.md
