@@ -252,11 +252,10 @@ addEntry(["weekend", "cycling", "break", "peanuts",
 
 如果把表格称作 *n*，我们可以用如下公式来计算 *ϕ*：
 
-$$\phi = \frac{n_{11}n_{00} - n_{10}n_{01}}{\sqrt{n_{1·}n_{0·}n_{·1}n_{·0}}}$$
+<img src="http://latex.codecogs.com/svg.latex?\phi&space;=&space;\frac{n_{11}n_{00}&space;-&space;n_{10}n_{01}}{\sqrt{n_{1·}n_{0·}n_{·1}n_{·0}}}" title="\phi = \frac{n_{11}n_{00} - n_{10}n_{01}}{\sqrt{n_{1·}n_{0·}n_{·1}n_{·0}}}" />
 
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
 [link_chapter_6]: ../Part_1_Language/06_object.md
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
