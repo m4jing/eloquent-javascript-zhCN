@@ -244,6 +244,8 @@ addEntry(["weekend", "cycling", "break", "peanuts",
 
 *相关性* 是统计变量之间依赖性的一种测量。统计变量不完全跟程序变量相同。在统计学中，通常会有一系列 *量度*，每个变量会针对每种量度进行测量。变量之间的相关性通常以 -1 到 1 范围内的一个值来表示。0 相关性意味着变量之间不相关。相关性为 1 表示两个变量完全相关 —— 只有你知道一个，你也就知道了另一个。-1 表示变量完全相关，但是方向相反 —— 当一个为真时，另一个为假。
 
+要计算两个布尔变量之间相关性的量度，我们可以用 *Phi参数*(*ϕ*)。这个公式的输入是一个频率表，它包含了变量的不同组合被观察到的次数。该公式的输出是描述相关性的 -1 到 1 之间的一个数字。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
