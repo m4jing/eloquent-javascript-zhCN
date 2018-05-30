@@ -281,8 +281,14 @@ console.log(phi([76, 9, 4, 1]));
 // → 0.068599434
 ```
 
+这是 *ϕ* 公式到`JavaScript`的直译。`Math.sqrt` 是求平方根函数，有`JavaScript`标准环境的 `Math` 对象提供。我们得对表格中两个项相加来得到像 *n*<sub>1·</sub> 这样的项，因为行或列的和在我们的数据结构中并没有直接存储。
+
+雅克保存了 3 个月的日志。最终的数据集可在本章的[编程沙盒][sandbox_4]中获取：它被保存到可下载[文件][download_journal]的 `JOURNAL` 绑定中。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
 [link_chapter_6]: ../Part_1_Language/06_object.md
+[sandbox_4]: https://eloquentjavascript.net/code#4
+[download_journal]: https://eloquentjavascript.net/code/journal.js
