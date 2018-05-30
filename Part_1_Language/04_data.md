@@ -254,6 +254,14 @@ addEntry(["weekend", "cycling", "break", "peanuts",
 
 <img src="http://latex.codecogs.com/svg.latex?\phi&space;=&space;\frac{n_{11}n_{00}&space;-&space;n_{10}n_{01}}{\sqrt{n_{1·}n_{0·}n_{·1}n_{·0}}}" title="\phi = \frac{n_{11}n_{00} - n_{10}n_{01}}{\sqrt{n_{1·}n_{0·}n_{·1}n_{·0}}}" />
 
+如果现在你正把书放下，绞尽脑汁回想十年级数学课 —— 先别急！我不想用无穷无尽难懂的标记来折磨你 —— 目前就只有这一个公式。而且，对于这一个，我们所有要做的就是：把它转为`JavaScript`。
+
+*n*<sub>01</sub> 表示测量中第一个变量(变成松鼠)为假(0)而第二个变量(披萨)为真(1)时的数量。在披萨表格中，*n*<sub>01</sub> 是 9。
+
+*n*<sub>1·</sub> 指的是第一个变量为真的所有测量的和，该示例表格中就是 5。类似地，*n*<sub>·0</sub> 指的是第二个变量为假的所有测量的和。
+
+因此，对于这个披萨表格，分割线以上的部分(被除数)就是 1×76−4×9 = 40，下面的部分(除数)则是 5×85×10×80 的平方根，或者 √340000。最终结果 *ϕ* ≈ 0.069，非常微小。吃披萨看起来对于变形没有多大的影响。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
