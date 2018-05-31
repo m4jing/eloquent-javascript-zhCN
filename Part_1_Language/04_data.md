@@ -285,6 +285,24 @@ console.log(phi([76, 9, 4, 1]));
 
 雅克保存了 3 个月的日志。最终的数据集可在本章的[编程沙盒][sandbox_4]中获取：它被保存到可下载[文件][download_journal]的 `JOURNAL` 绑定中。
 
+为了从日志中提取出某一特定事件的 2&times;2 表格，我们需要循环所有的条目，并且标记涉及到松鼠变形时、该事件发生了多少次。
+
+```js
+function tableFor(event, journal) {
+  let table = [0, 0, 0, 0];
+  for (let i = 0; i < journal.length; i++) {
+    let entry = journal[i], index = 0;
+    if (entry.events.includes(event)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
+
+console.log(tableFor("pizza", JOURNAL));
+// → [76, 9, 4, 1]
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
