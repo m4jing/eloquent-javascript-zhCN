@@ -303,6 +303,8 @@ console.log(tableFor("pizza", JOURNAL));
 // → [76, 9, 4, 1]
 ```
 
+数组有一个 `includes` 方法，用来检测一个指定值是否存在于数组中。该函数利用了这一点来确定感兴趣的事件名是否是指定日中事件列表的一部分。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
