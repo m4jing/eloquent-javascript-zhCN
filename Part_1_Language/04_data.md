@@ -305,6 +305,10 @@ console.log(tableFor("pizza", JOURNAL));
 
 数组有一个 `includes` 方法，用来检测一个指定值是否存在于数组中。该函数利用了这一点来确定感兴趣的事件名是否是指定日中事件列表的一部分。
 
+`tableFor` 中的循环体会检查每一条记录是否包含所感兴趣的事件以及此事件是否伴随松鼠事件发生，由此判定每一条日志记录落在表格的哪个方块中。该循环随后在表格的相应方块中加一。
+
+现在我们有了计算独立的相关性的工具。唯一剩下的步骤就是：找到所记录的每一种事件所对应的相关性，并查看是否有些什么线索。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
