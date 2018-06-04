@@ -309,6 +309,17 @@ console.log(tableFor("pizza", JOURNAL));
 
 现在我们有了计算独立的相关性的工具。唯一剩下的步骤就是：找到所记录的每一种事件所对应的相关性，并查看是否有些什么线索。
 
+## 数组循环
+
+在 `tableFor` 函数中，有一个这样的循环：
+
+```js
+for (let i = 0; i < JOURNAL.length; i++) {
+  let entry = JOURNAL[i];
+  // Do something with entry
+}
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
