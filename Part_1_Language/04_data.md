@@ -320,6 +320,16 @@ for (let i = 0; i < JOURNAL.length; i++) {
 }
 ```
 
+这种循环在典型的`JavaScript`中很常见 —— 一次一个元素地遍历数组是经常出现的，为此你需要执行一个计数器来遍历数组的长度，并依次从中取出每个元素。
+
+在现代`JavaScript`中，有一个更简洁的方式来写这样的循环。
+
+```js
+for (let entry of JOURNAL) {
+  console.log(`${entry.events.length} events.`);
+}
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
