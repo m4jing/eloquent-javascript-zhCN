@@ -330,6 +330,8 @@ for (let entry of JOURNAL) {
 }
 ```
 
+当 `for` 循环看起来这样，一个变量定义之后跟着 `of`，它会循环遍历 `of` 之后所给定的值的所有元素。不仅对数组适用，对字符串和其他一些数据结构也适用。我们将在[第六章][link_chapter_6]讨论它 *如何* 工作。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
