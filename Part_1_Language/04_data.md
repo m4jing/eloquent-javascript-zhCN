@@ -495,11 +495,54 @@ console.log("one two three".indexOf("ee"));
 // → 11
 ```
 
+`trim` 方法用来删除字符串开头和结尾的空白字符(空格，换行，制表符和类似的字符)。
+
+```js
+console.log("  okay \n ".trim());
+// → okay
+```
+
+[上一章][link_chapter_3]的 `zeroPad` 函数也存在一个方法。这就是 `padStart`：以目标长度和填充字符为参数。
+
+```js
+console.log(String(6).padStart(3, "0"));
+// → 006
+```
+
+可以用 `split` 将一个字符串以另一个字符串为分隔符分隔开，然后用 `join` 再把它聚合在一起。
+
+```js
+let sentence = "Secretarybirds specialize in stomping";
+let words = sentence.split(" ");
+console.log(words);
+// → ["Secretarybirds", "specialize", "in", "stomping"]
+console.log(words.join(". "));
+// → Secretarybirds. specialize. in. stomping
+```
+
+可以用 `repeat` 方法对字符串进行重复：它会创建一个新的字符串，包含着原始字符串的多个拷贝并粘合在一起。
+
+```js
+console.log("LA".repeat(3));
+// → LALALA
+```
+
+我们已经看过了字符串类型的 `length` 属性。获取字符串中的单个字符看起来跟获取数组元素类似(将在[第五章][link_chapter_5]继续讨论)。
+
+```js
+let string = "abc";
+console.log(string.length);
+// → 3
+console.log(string[1]);
+// → b
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
 [link_chapter_4#array_methods]: ../Part_1_Language/04_data.md#array_methods
+[link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
 [sandbox_4]: https://eloquentjavascript.net/code#4
 [download_journal]: https://eloquentjavascript.net/code/journal.js
