@@ -387,6 +387,23 @@ for (let event of journalEvents(JOURNAL)) {
 // → peanuts:        0.5902679812
 ```
 
+啊哈！有两个因素，其相关性明显强于其他因素。吃花生对于变成松鼠有着很强的正向效应，而刷牙则有很大的负效应。
+
+有意思。我们来尝试一下。
+
+```js
+for (let entry of JOURNAL) {
+  if (entry.events.includes("peanuts") &&
+     !entry.events.includes("brushed teeth")) {
+    entry.events.push("peanut teeth");
+  }
+}
+console.log(phi(tableFor("peanut teeth", JOURNAL)));
+// → 1
+```
+
+这是个明显的结果。现象恰好发生于当雅克吃了花生但没有刷牙的时候。如果他不懒于对待牙科卫生，就不会遭遇这种痛苦。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
