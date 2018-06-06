@@ -442,6 +442,17 @@ console.log([1, 2, 3, 2, 1].lastIndexOf(2));
 
 `indexOf` 和 `lastIndexOf` 都接受可选的用于指示从哪儿开始搜索的第二个参数。
 
+另一个基础的数组方法是 `slice`，它接受起始和末尾的索引为参数并返回仅由它们之间的元素所组成的一个数组。起始索引包括在内，而末尾索引则不包括。
+
+```js
+console.log([0, 1, 2, 3, 4].slice(2, 4));
+// → [2, 3]
+console.log([0, 1, 2, 3, 4].slice(2));
+// → [2, 3, 4]
+```
+
+当末尾索引没有提供时，`slice` 会获取起始索引之后的所有元素。也可以省略起始索引来拷贝整个数组。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
