@@ -429,6 +429,19 @@ function rememberUrgently(task) {
 }
 ```
 
+这段程序管理着任务队列。通过调用 `remember("groceries")` 向队列的末端添加任务，当准备做些事情的时候，就调用 `getTask()` 来从队列中获取(并删除)前面的项。`rememberUrgently` 函数也会添加任务，但是它会添加到队列的前面而不是后面。
+
+要搜索一个特定值，数组提供了 `indexOf` 方法。它会从头到尾遍历数组，并在请求的值被找到时返回当前索引 —— 或者在未找到时返回 -1。要从末端而不是开头搜索，有一个类似的方法 `lastIndexOf`。
+
+```js
+console.log([1, 2, 3, 2, 1].indexOf(2));
+// → 1
+console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+// → 3
+```
+
+`indexOf` 和 `lastIndexOf` 都接受可选的用于指示从哪儿开始搜索的第二个参数。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
