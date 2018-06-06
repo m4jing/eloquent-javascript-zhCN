@@ -410,10 +410,30 @@ console.log(phi(tableFor("peanut teeth", JOURNAL)));
 
 一天，厌烦于这样可鄙的存在，雅克没有变回人形，沿着马戏团帐篷的缝隙跳跃着，随后消失于森林中。再也没有人见过他。
 
+## 深入数组
+
+结束本章之前，我想再给你介绍一些对象相关的概念。首先介绍一些有用的数组方法。
+
+我们在[本章前面部分][link_chapter_4#array_methods]已经看到 `push` 和 `pop` 了：在数字末端添加和删除元素。相应的在数组前面添加和删除元素的方法为 `unshift` 和 `shift`。
+
+```js
+let todoList = [];
+function remember(task) {
+  todoList.push(task);
+}
+function getTask() {
+  return todoList.shift();
+}
+function rememberUrgently(task) {
+  todoList.unshift(task);
+}
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
+[link_chapter_4#array_methods]: ../Part_1_Language/04_data.md#array_methods
 [link_chapter_6]: ../Part_1_Language/06_object.md
 [sandbox_4]: https://eloquentjavascript.net/code#4
 [download_journal]: https://eloquentjavascript.net/code/journal.js
