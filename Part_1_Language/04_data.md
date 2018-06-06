@@ -355,6 +355,38 @@ console.log(journalEvents(JOURNAL));
 
 通过遍历所有的事件，并将还不存在于 `events` 数组中的那些添加进来，该函数收集了每一种事件类型。
 
+此时，我们可以查看所有的相关性。
+
+```js
+for (let event of journalEvents(JOURNAL)) {
+  console.log(event + ":", phi(tableFor(event, JOURNAL)));
+}
+// → carrot:   0.0140970969
+// → exercise: 0.0685994341
+// → weekend:  0.1371988681
+// → bread:   -0.0757554019
+// → pudding: -0.0648203724
+// and so on...
+```
+
+大部分相关性看起来都接近于 0。吃胡萝卜、面包或布丁很明显没能触发松鼠变形事件。它 *确实* 更多地发生在周末。我们来过滤一下结果，只显示相关性大于 0.1 或小于 -0.1 的部分。
+
+```js
+for (let event of journalEvents(JOURNAL)) {
+  let correlation = phi(tableFor(event, JOURNAL));
+  if (correlation > 0.1 || correlation < -0.1) {
+    console.log(event + ":", correlation);
+  }
+}
+// → weekend:        0.1371988681
+// → brushed teeth: -0.3805211953
+// → candy:          0.1296407447
+// → work:          -0.1371988681
+// → spaghetti:      0.2425356250
+// → reading:        0.1106828054
+// → peanuts:        0.5902679812
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
