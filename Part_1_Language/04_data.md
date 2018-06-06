@@ -453,6 +453,19 @@ console.log([0, 1, 2, 3, 4].slice(2));
 
 当末尾索引没有提供时，`slice` 会获取起始索引之后的所有元素。也可以省略起始索引来拷贝整个数组。
 
+`concat` 方法用于粘合数组以生成一个新数组，类似于字符串的 `+` 操作符。如下例子演示了 `concat` 和 `slice` 实战。它以一个数组和一个索引为参数，并返回原数组的一个拷贝，其中指定索引对应的元素被删除掉。
+
+```js
+function remove(array, index) {
+  return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+```
+
+如果传给 `concat` 一个不是数组的参数，这个值将被添加到新的数组，就好像它是一个单元素的数组。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
