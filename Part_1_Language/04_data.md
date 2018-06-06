@@ -466,6 +466,19 @@ console.log(remove(["a", "b", "c", "d", "e"], 2));
 
 如果传给 `concat` 一个不是数组的参数，这个值将被添加到新的数组，就好像它是一个单元素的数组。
 
+## 字符串及其性质
+
+我们可以从字符串值中读取像 `length` 和 `toUpperCase` 这样的属性。但是如果你尝试添加一个新的属性，是不会生效的。
+
+```js
+let kim = "Kim";
+kim.age = 88;
+console.log(kim.age);
+// → undefined
+```
+
+字符串、数字和布尔类型的值不是对象，如果你尝试对其设置新的属性，尽管语言不会抱怨，但实际上并没有保存这些属性。如前所述，这些值是不可变的，无法更改。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
