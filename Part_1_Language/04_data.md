@@ -404,6 +404,12 @@ console.log(phi(tableFor("peanut teeth", JOURNAL)));
 
 这是个明显的结果。现象恰好发生于当雅克吃了花生但没有刷牙的时候。如果他不懒于对待牙科卫生，就不会遭遇这种痛苦。
 
+知道了这个，雅克完全停止吃花生，并发现再也没有发生过变形了。
+
+很多年里，对雅克来说，事情都很顺利。但在某个时候，他丢掉了工作。因为他住在一个糟糕的乡村，没有工作就意味着没有医疗服务，他不得不受雇于一个马戏团并表演 *无敌松鼠人*，每次表演前都要在嘴巴里塞满花生酱。
+
+一天，厌烦于这样可鄙的存在，雅克没有变回人形，沿着马戏团帐篷的缝隙跳跃着，随后消失于森林中。再也没有人见过他。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
