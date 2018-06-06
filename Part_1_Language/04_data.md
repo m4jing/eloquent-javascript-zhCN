@@ -332,6 +332,29 @@ for (let entry of JOURNAL) {
 
 当 `for` 循环看起来这样，一个变量定义之后跟着 `of`，它会循环遍历 `of` 之后所给定的值的所有元素。不仅对数组适用，对字符串和其他一些数据结构也适用。我们将在[第六章][link_chapter_6]讨论它 *如何* 工作。
 
+## 最终分析
+
+我们需要对数据集中出现的每一张事件类型计算其相关性。为此，我们首先得 *找到* 每种事件类型。
+
+```js
+function journalEvents(journal) {
+  let events = [];
+  for (let entry of journal) {
+    for (let event of entry.events) {
+      if (!events.includes(event)) {
+        events.push(event);
+      }
+    }
+  }
+  return events;
+}
+
+console.log(journalEvents(JOURNAL));
+// → ["carrot", "exercise", "weekend", "bread", …]
+```
+
+通过遍历所有的事件，并将还不存在于 `events` 数组中的那些添加进来，该函数收集了每一种事件类型。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
