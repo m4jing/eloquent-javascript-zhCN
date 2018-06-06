@@ -479,6 +479,22 @@ console.log(kim.age);
 
 字符串、数字和布尔类型的值不是对象，如果你尝试对其设置新的属性，尽管语言不会抱怨，但实际上并没有保存这些属性。如前所述，这些值是不可变的，无法更改。
 
+不过这些类型确实有内置的属性。每个字符串值都有很多方法。一些非常有用的像是 `slice` 和 `indexOf`，与数组的同名方法类似。
+
+```js
+console.log("coconuts".slice(4, 7));
+// → nut
+console.log("coconut".indexOf("u"));
+// → 5
+```
+
+有一个区别：字符串的 `indexOf` 可以搜索包含多个字符的字符串，而对应的数组方法只能查询单一元素。
+
+```js
+console.log("one two three".indexOf("ee"));
+// → 11
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
