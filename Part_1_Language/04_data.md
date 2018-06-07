@@ -612,6 +612,17 @@ console.log(Math.random());
 
 尽管计算机是确定性的机器 —— 它们总是对相同的输入做出同样方式的反应 —— 也有可能让它们生成看似随机的数字。为此，机器保存了某个隐藏值，无论何时你请求一个新的随机数，它都会对这个隐藏值进行复杂的运算以创造一个新的值。它保存了这个新的值，并返回派生于它的某个数字。通过这种方式，它就能以 *看似* 随机的方式生成全新的、难以预测的数字。
 
+如果我们需要一个随机的整数而不是小数，我们可以对 `Math.random` 的结果使用 `Math.floor`(会向下取整到最接近的整数)。
+
+```js
+console.log(Math.floor(Math.random() * 10));
+// → 2
+```
+
+对随机数乘以 10 会生成大于等于 0 且小于 10 的一个数字。因为 `Math.floor` 向下取整，这个表达式将以相同的概率生成 0 到 9 之间的任一数字。
+
+还有一些函数如 `Math.ceil` (就像“天花板”，它会向上取整)，`Math.round` (取最接近的整数)和 `Math.abs`，用来获取一个数字的绝对值：对负数取反而整数则保持不变。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
