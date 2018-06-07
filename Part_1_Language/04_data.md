@@ -555,6 +555,26 @@ console.log(max(4, 1, 9, -2));
 // → 9
 ```
 
+当这样的函数被调用时，*rest 参数* 被绑定到一个包含所有更多参数的数组。如果在此之前还有其他参数，这些值不包含在内。当像 `max` 这样作为第一个参数时，它将持有所有参数。
+
+也可以用类似的“三个点”标记法来用参数的数组 *调用* 函数。
+
+```js
+let numbers = [5, 1, 7];
+console.log(max(...numbers));
+// → 7
+```
+
+这会“展开”该数组到函数调用中，将其元素作为单独的参数传入。也可以像这样来和其他参数一起引入一个数组，比如 `max(9, ...numbers, 2)`。
+
+类似地，方括号的数组标记法也允许三点操作符来展开另一个数组到新的数组中：
+
+```js
+let words = ["never", "fully"];
+console.log(["will", ...words, "understand"]);
+// → ["will", "never", "fully", "understand"]
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
