@@ -599,6 +599,19 @@ console.log(randomPointOnCircle(2));
 
 如果你不熟悉正弦和余弦，也不用担心。在[第十四章][link_chapter_14#sin_cos]中用到它们的时候，我会解释的。
 
+上面的例子用到了 `Math.random`。这是一个每次调用时返回 0 (包含)和 1 (不包含)之间的一个伪随机数的函数。
+
+```js
+console.log(Math.random());
+// → 0.36993729369714856
+console.log(Math.random());
+// → 0.727367032552138
+console.log(Math.random());
+// → 0.40180766698904335
+```
+
+尽管计算机是确定性的机器 —— 它们总是对相同的输入做出同样方式的反应 —— 也有可能让它们生成看似随机的数字。为此，机器保存了某个隐藏值，无论何时你请求一个新的随机数，它都会对这个隐藏值进行复杂的运算以创造一个新的值。它保存了这个新的值，并返回派生于它的某个数字。通过这种方式，它就能以 *看似* 随机的方式生成全新的、难以预测的数字。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
