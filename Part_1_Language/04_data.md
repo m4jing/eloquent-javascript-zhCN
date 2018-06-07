@@ -585,6 +585,20 @@ console.log(["will", ...words, "understand"]);
 
 当你在定义一个名称已被占用的绑定时，很多语言会阻止你，或者至少会发出警告。`JavaScript`对于用 `let` 或 `const` 声明的绑定也会如此，但是对于标准的绑定就不会这样，对用 `var` 或 `function` 声明的绑定也不会。
 
+回到 `Math` 对象。如果你需要做三角运算，`Math` 可以帮上忙。它包含了 `cos` (余弦)，`sin` (正弦)和 `tan` (正切)，以及他们各自的反函数 `acos`、`asin` 和 `atan`。数字 π (pi) —— 或者`JavaScript`中最接近的数字 —— 可用 `Math.PI` 表示。这里有一个古老的编程传统：常量的名称全部大写。
+
+```js
+function randomPointOnCircle(radius) {
+  let angle = Math.random() * 2 * Math.PI;
+  return {x: radius * Math.cos(angle),
+          y: radius * Math.sin(angle)};
+}
+console.log(randomPointOnCircle(2));
+// → {x: 0.3667, y: 1.966}
+```
+
+如果你不熟悉正弦和余弦，也不用担心。在[第十四章][link_chapter_14#sin_cos]中用到它们的时候，我会解释的。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
@@ -592,5 +606,6 @@ console.log(["will", ...words, "understand"]);
 [link_chapter_4#array_methods]: ../Part_1_Language/04_data.md#array_methods
 [link_chapter_5]: ../Part_1_Language/05_higher_order.md
 [link_chapter_6]: ../Part_1_Language/06_object.md
+[link_chapter_14#sin_cos]: ../Part_2_Browser/14_dom.md#sin_cos
 [sandbox_4]: https://eloquentjavascript.net/code#4
 [download_journal]: https://eloquentjavascript.net/code/journal.js
