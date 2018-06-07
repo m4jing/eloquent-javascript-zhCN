@@ -575,6 +575,12 @@ console.log(["will", ...words, "understand"]);
 // → ["will", "never", "fully", "understand"]
 ```
 
+## `Math` 对象
+
+正如所见，`Math` 是一个跟数字相关的应用函数包，比如 `Math.max` (最大值)，`Math.min` （最小值）和 `Math.sqrt` (平方根)。
+
+`Math` 对象用作组合一系列相关功能的容器。仅仅有一个 `Math` 对象，并且几乎不会直接用它的值本身。相反，它提供了一个 *命名空间*，这样所有这些函数和值就不需要是全局绑定了。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
