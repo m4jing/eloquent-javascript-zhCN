@@ -537,6 +537,24 @@ console.log(string[1]);
 // → b
 ```
 
+## rest 参数
+
+函数可以接受任意数量的参数，是非常有用的。比如，`Math.max` 可以计算 *所有* 传入的参数中的最大值。
+
+要写出这样的函数，可以在函数的最后一个参数前放上三个点，像这样：
+
+```js
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+console.log(max(4, 1, 9, -2));
+// → 9
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
