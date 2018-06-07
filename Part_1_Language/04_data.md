@@ -581,6 +581,10 @@ console.log(["will", ...words, "understand"]);
 
 `Math` 对象用作组合一系列相关功能的容器。仅仅有一个 `Math` 对象，并且几乎不会直接用它的值本身。相反，它提供了一个 *命名空间*，这样所有这些函数和值就不需要是全局绑定了。
 
+太多的全局绑定会 *污染* 命名空间。越多名称被占用，就越有可能意外地覆盖某些现存的绑定。比如，在你的程序中想取个名称叫 `max` 也不是不可能。因为`JavaScript`内置的 `max` 函数被安全地塞进了 `Math` 对象，我们不必担心它被覆盖的问题。
+
+当你在定义一个名称已被占用的绑定时，很多语言会阻止你，或者至少会发出警告。`JavaScript`对于用 `let` 或 `const` 声明的绑定也会如此，但是对于标准的绑定就不会这样，对用 `var` 或 `function` 声明的绑定也不会。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
