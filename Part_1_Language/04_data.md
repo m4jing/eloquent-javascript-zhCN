@@ -659,6 +659,12 @@ console.log(name);
 
 注意！如果你尝试结构 `null` 或 `undefined`，将会报错，正如你尝试直接访问这些值的属性一样。
 
+## `JSON`
+
+因为属性只是抓取值而不是包含值，对象和数组在计算机内存中存储为比特序列，它持有着内容的 *地址* —— 内存中的地点。因此，一个包含另一个数组在内的数组(至少)由一块保存内层数组的内存区域和另一块保存外层数组的区域，它包含着(还有其他内容)表示内层数组位置的二进制数。
+
+如果想把数据保存到文件中供后续使用，或通过网络将它传输到另一台计算机，就必须通过某种方式把这些繁杂的内存地址转换为可以存储或发送的描述。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
