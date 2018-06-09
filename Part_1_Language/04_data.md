@@ -623,6 +623,22 @@ console.log(Math.floor(Math.random() * 10));
 
 还有一些函数如 `Math.ceil` (就像“天花板”，它会向上取整)，`Math.round` (取最接近的整数)和 `Math.abs`，用来获取一个数字的绝对值：对负数取反而整数则保持不变。
 
+## 解构
+
+我们先回到 `phi` 函数。
+
+```js
+function phi(table) {
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
+}
+```
+
+
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
