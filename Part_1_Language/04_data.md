@@ -637,7 +637,27 @@ function phi(table) {
 }
 ```
 
+这个函数难以阅读，其中一个原因就是我们有一个指向数组的绑定，而我们更希望有针对数组 *元素* 的绑定，也就是 `let n00 = table[0]` 等等。幸运的是，`JavaScript`中有个简洁的方式来实现。
 
+```js
+function phi([n00, n01, n10, n11]) {
+  return (n11 * n00 - n10 * n01) /
+    Math.sqrt((n10 + n11) * (n00 + n01) *
+              (n01 + n11) * (n00 + n10));
+}
+```
+
+这对于用 `let`、`var` 和 `const` 创建的绑定也适用。如果你知道正绑定的值是一个数组，就可以用方括号来“探查”该值并绑定其内容。
+
+同样的技巧也可以用于对象，此时使用大括号而不是方括号。
+
+```js
+let {name} = {name: "Faraji", age: 23};
+console.log(name);
+// → Faraji
+```
+
+注意！如果你尝试结构 `null` 或 `undefined`，将会报错，正如你尝试直接访问这些值的属性一样。
 
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
