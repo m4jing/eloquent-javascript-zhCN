@@ -678,6 +678,17 @@ JSON 看起来很像是用 `JavaScript` 的方式来写数组和对象，只是�
 }
 ```
 
+`JavaScript`提供了函数 `JSON.stringify` 和 `JSON.parse`，用来在数据和这种格式间相互转换。第一个以`JavaScript`值为参数，并返回一个 JSON 编码的字符串。第二个以这样的一个字符串为参数并将其转换为它所编码的值。
+
+```js
+let string = JSON.stringify({squirrel: false,
+                             events: ["weekend"]});
+console.log(string);
+// → {"squirrel":false, "events":["weekend"]}
+console.log(JSON.parse(string).events);
+// → ["weekend"]
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
