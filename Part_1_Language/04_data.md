@@ -709,6 +709,23 @@ console.log(JSON.parse(string).events);
 console.log(sum(range(1, 10)));
 ```
 
+写一个 `range` 函数，接受两个参数 `start` 和 `end`，返回一个包含从 `start` 到 `end`(包括)之间所有数字的数组。
+
+下一步，写一个 `sum` 函数，以一个数字数组为参数，返回这些数字之和。运行示例程序并查看是否真的返回了 55。
+
+作为附加作业，修改你的 `range` 函数，使其能接受可选的第三个参数：用来表示创建数组时的“步进”值。如果没有提供步进值，元素就逐次加一，和以前的行为一致。函数调用 `range(1, 10, 2)` 应该返回 `[1, 3, 5, 7, 9]`。要确保它也适用于负数步进值，使得 `range(5, 2, -1)` 生成 `[5, 4, 3, 2]`。
+
+```js
+// Your code here.
+
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
+console.log(sum(range(1, 10)));
+// → 55
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_0]: ../Part_0_Introduction/00_intro.md
