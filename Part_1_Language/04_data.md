@@ -699,8 +699,19 @@ console.log(JSON.parse(string).events);
 
 可以用一种特殊的 `for` 循环来迭代数组 —— `for (let element of array)`。
 
+## 练习
+
+### 序列的和
+
+本书的[简介][link_chapter_0]中提到了下面这种优雅的计算数字序列和的方式。
+
+```js
+console.log(sum(range(1, 10)));
+```
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
+[link_chapter_0]: ../Part_0_Introduction/00_intro.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
 [link_chapter_4#array_methods]: ../Part_1_Language/04_data.md#array_methods
