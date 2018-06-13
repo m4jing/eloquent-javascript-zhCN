@@ -693,7 +693,11 @@ console.log(JSON.parse(string).events);
 
 对象和数组(一种特殊的对象)提供了把多个值组合成单一值的方式。概念上讲，这使得我们可以把一堆相关的东西放进一个袋子里，然后带着这个袋子四处走动，而不是用胳膊紧抱所有单个的东西。
 
-`JavaScript`中的大多数值都有属性，除了 `null` 和 `undefined`。通过 `value.prop` 或 `value["prop"]` 访问属性。对象常常用名称来标识属性，并且存储着几乎固定的属性集合。而数组通常包含变化数量的概念上相同的值，并且用数组(从 0 开始)作为属性的名称。
+`JavaScript`中的大多数值都有属性，`null` 和 `undefined` 除外。通过 `value.prop` 或 `value["prop"]` 来访问属性。对象常常用名称来标识属性，并且存储着几乎固定的属性集合。而数组通常包含变化数量的概念上相同的值，并且用数字(从 0 开始)作为属性的名称。
+
+数组中 *确实* 有一些命名的属性，比如 `length` 和很多方法。方法是以属性的方式存在的函数，并(通常)作用于拥有该属性的值。
+
+可以用一种特殊的 `for` 循环来迭代数组 —— `for (let element of array)`。
 
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
