@@ -726,6 +726,12 @@ console.log(sum(range(1, 10)));
 // → 55
 ```
 
+## 倒转数组
+
+数组有一个 `reverse` 方法用来修改数组，使其元素以逆序排列。对于这个练习，写两个函数 `reverseArray` 和 `reverseArrayInPlace`。第一个 `reverseArray`，以一个数组为参数并生成一个相同元素逆序排列的 *新* 数组。第二个 `reverseArrayInPlace`，和 `reverse` 一样：它会 *修改* 传入的数组，使其逆序。二者都不可用标准的 `reverse` 方法。
+
+回想一下[上一章][link_chapter_3]中关于副作用和纯函数的讲解，你认为哪种变体在更多情形中有用？哪个运行起来更快？
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_0]: ../Part_0_Introduction/00_intro.md
