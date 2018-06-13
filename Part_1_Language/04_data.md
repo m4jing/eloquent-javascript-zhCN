@@ -732,8 +732,30 @@ console.log(sum(range(1, 10)));
 
 回想一下[上一章][link_chapter_3]中关于副作用和纯函数的讲解，你认为哪种变体在更多情形中有用？哪个运行起来更快？
 
+## 链表
+
+对象，作为通用的值，可以用来构建所有的数据结构。一种常见的数据结构就是 *链表* (不要跟数组混淆)。链表是嵌套的对象：第一个对象持有第二个对象的引用，第二个引用第三个，以此类推。
+
+```js
+let list = {
+  value: 1,
+  rest: {
+    value: 2,
+    rest: {
+      value: 3,
+      rest: null
+    }
+  }
+};
+```
+
+结果对象形成了一条链，就像这样：
+
+![linked-list][linked-list]
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
+[linked-list]: ../assets/linked-list.svg
 [link_chapter_0]: ../Part_0_Introduction/00_intro.md
 [link_chapter_3]: ../Part_1_Language/03_functions.md
 [link_chapter_4#exercise_deep_compare]: ../Part_1_Language/04_data.md#exercise_deep_compare
