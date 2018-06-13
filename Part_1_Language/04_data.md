@@ -689,6 +689,12 @@ console.log(JSON.parse(string).events);
 // → ["weekend"]
 ```
 
+## 总结
+
+对象和数组(一种特殊的对象)提供了把多个值组合成单一值的方式。概念上讲，这使得我们可以把一堆相关的东西放进一个袋子里，然后带着这个袋子四处走动，而不是用胳膊紧抱所有单个的东西。
+
+`JavaScript`中的大多数值都有属性，除了 `null` 和 `undefined`。通过 `value.prop` 或 `value["prop"]` 访问属性。对象常常用名称来标识属性，并且存储着几乎固定的属性集合。而数组通常包含变化数量的概念上相同的值，并且用数组(从 0 开始)作为属性的名称。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [link_chapter_3]: ../Part_1_Language/03_functions.md
