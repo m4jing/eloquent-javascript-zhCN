@@ -753,6 +753,12 @@ let list = {
 
 ![linked-list][linked-list]
 
+链表一个很棒的事情是：它们可以共享结构中的某些部分。比如，如果我创建两个新的值 `{value: 0, rest: list}` 和 `{value: -1, rest: list}` (`list`指的是上面定义的绑定)，它们是独立的链表，但是它们共享了组成它们最后三个元素的结构。原始的链表依然是一个合法的三元素链表。
+
+写一个函数 `arrayToList` 来构建所展示的、当传入 `[1, 2, 3]` 为参数时所生成的链表结构。也写一个 `listToArray` 函数用来从链表生成数组。然后添加一个辅助函数 `prepend`，它接受一个元素和一个链表为参数并创建一个新的链表 —— 把该元素添加到输入链表的头部，然后是 `nth`，以一个链表和一个数字为参数并返回链表中指定位置的元素(0 代表第一个元素) 或当没有这样的元素时返回 `undefined`。
+
+如果还没有写的话，也写出一个递归版本的 `nth`。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [linked-list]: ../assets/linked-list.svg
