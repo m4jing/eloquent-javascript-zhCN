@@ -28,7 +28,7 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 1. [程序结构][link_chapter_2]
 1. [函数][link_chapter_3]
 1. [数据结构：对象和数组][link_chapter_4]
-1. 高阶函数
+1. [高阶函数][link_chapter_5]
 1. The Secret Life of Objects
 1. Project: A Robot
 1. Bug 和错误
@@ -56,3 +56,4 @@ Licensed under a [Creative Commons attribution-noncommercial license][cc]. All c
 [link_chapter_2]: Part_1_Language/02_program_structure.md
 [link_chapter_3]: Part_1_Language/03_functions.md
 [link_chapter_4]: Part_1_Language/04_data.md
+[link_chapter_5]: Part_1_Language/05_higher_order.md
