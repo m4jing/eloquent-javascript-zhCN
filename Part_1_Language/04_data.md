@@ -759,6 +759,16 @@ let list = {
 
 如果还没有写的话，也写出一个递归版本的 `nth`。
 
+## 深度比较
+
+`==` 操作符通过相等性来比较对象。但有时候，你更想比较它们真实属性的值。
+
+写一个函数 `deepEqual`：以两个值为参数，当它们是相同的值或有着同样的属性且当递归调用 `deepEqual` 来比较时属性值也相等的对象的时候，返回 `true`。
+
+要弄清楚通过相等性还是通过查看它们的属性来比较两个值，可以使用 `typeof` 操作符。如果对于两个值，它都生成 `"object"`，就应该用深度比较。但是必须得考虑到一个例外：因为历史偶然原因，`typeof null` 也会生成 `"object"`。
+
+在需要迭代要比较的对象的属性时，`Object.keys` 函数会很有帮助。
+
 [chapter_picture_4]: ../assets/chapter_picture_4.jpg
 [pizza-squirrel]: ../assets/pizza-squirrel.svg
 [linked-list]: ../assets/linked-list.svg
