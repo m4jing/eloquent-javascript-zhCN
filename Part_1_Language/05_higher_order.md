@@ -6,4 +6,6 @@
 
 ![chapter_picture_5][chapter_picture_5]
 
+大型程序非常昂贵，不仅仅是因为构建所要花的时间。
+
 [chapter_picture_5]: ../assets/chapter_picture_5.jpg
