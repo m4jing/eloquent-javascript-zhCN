@@ -90,4 +90,17 @@ repeat(3, console.log);
 // → 2
 ```
 
+不需要传递一个预先定义好的函数给 `repeat`。通常来说，相反，你希望在这个点上创建一个函数。
+
+```js
+let labels = [];
+repeat(5, i => {
+  labels.push(`Unit ${i + 1}`);
+})
+console.log(labels);
+// → ["Unit 1", "Unit 2", "Unit 3", "Unit 4", "Unit 5"]
+```
+
+这被组织得有点像 `for` 循环 —— 首先描述循环的类型，然后是循环体。不过，这里的循环体被写成一个函数值，并放置在对 `repeat` 的调用的括号中。这就是为什么必须用大括号 *和* 括号来关闭。在像这个例子的情况里，循环体就是一个单一的表达式，也可以省略掉大括号，把循环写成一行。
+
 [chapter_picture_5]: ../assets/chapter_picture_5.jpg
