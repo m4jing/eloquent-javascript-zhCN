@@ -65,4 +65,14 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+我们可以把“做某事 *N* 次”抽象成一个函数吗？没问题，很容易写出一个调用 `console.log` *N* 次的函数。
+
+```js
+function repeatLog(n) {
+  for (let i = 0; i < n; i++) {
+    console.log(i);
+  }
+}
+```
+
 [chapter_picture_5]: ../assets/chapter_picture_5.jpg
