@@ -75,4 +75,19 @@ function repeatLog(n) {
 }
 ```
 
+但是如果我们想做其他事情而不是打印出数字呢？因为“做某事”可以用一个函数表示，而函数也仅仅是值，我们可以把动作作为一个函数值传递进去。
+
+```js
+function repeat(n, action) {
+  for (let i = 0; i < n; i++) {
+    action(i);
+  }
+}
+
+repeat(3, console.log);
+// → 0
+// → 1
+// → 2
+```
+
 [chapter_picture_5]: ../assets/chapter_picture_5.jpg
