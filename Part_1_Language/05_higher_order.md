@@ -118,4 +118,43 @@ console.log(greaterThan10(11));
 // → true
 ```
 
+也可以有改变其他函数的函数。
+
+```js
+function noisy(f) {
+  return (...args) => {
+    console.log("calling with", args);
+    let result = f(...args);
+    console.log("called with", args, ", returned", result);
+    return result;
+  };
+}
+noisy(Math.min)(3, 2, 1);
+// → calling with [3, 2, 1]
+// → called with [3, 2, 1], returned 1
+```
+
+甚至可以写函数来提供新型的控制流。
+
+```js
+function unless(test, then) {
+  if (!test) then();
+}
+repeat(3, n => {
+  unless(n % 2 == 1, () => {
+    console.log(n, 'is even');
+  })
+});
+// → 0 'is even'
+// → 2 'is even'
+```
+
+有一个内置的数组方法 `forEach`，作为一个高阶函数提供了类似于 `for/of` 循环的功能。
+
+```js
+["A", "B"].forEach(l => console.log(l));
+// → A
+// → B
+```
+
 [chapter_picture_5]: ../assets/chapter_picture_5.jpg
